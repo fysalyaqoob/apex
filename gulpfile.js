@@ -20,7 +20,7 @@ var gulp = require('gulp'),
 
 // Clean task
 gulp.task('clean', function() {
-  return del(['dist', 'assets/css/app.css']);
+  return del(['dist', 'dist/**/*.scss', 'assets/css/app.css']);
 });
 
 // Copy third party libraries from node_modules into /vendor
@@ -179,7 +179,7 @@ gulp.task('zip', function() {
 // This task creates a new GitHub release with the zipped file
 gulp.task('github:release', function(done) {
   ghRelease({
-    repo: 'fysalyaqoob/apex',
+    repo: 'apex',
     auth: {
       token: process.env.GITHUB_TOKEN
     },
