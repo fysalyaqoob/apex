@@ -20,7 +20,7 @@ var gulp = require('gulp'),
 
 // Clean task
 gulp.task('clean', function() {
-  return del(['dist', 'dist/**/*.scss', 'assets/css/app.css']);
+  return del(['dist', 'assets/css/app.css']);
 });
 
 // Copy third party libraries from node_modules into /vendor
@@ -146,7 +146,8 @@ gulp.task('dev', function browserDev(done) {
 gulp.task("copyAssets", function() {
   return gulp.src([
     '!*.html',
-    "assets/**/*"
+    "assets/**/*",
+    "!assets/scss/**",  // This line excludes all SCSS files
   ], { base: './'})
     .pipe(gulp.dest('dist'));
 });
