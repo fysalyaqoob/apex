@@ -176,26 +176,57 @@ gulp.task('zip', function() {
     .pipe(gulp.dest('release'));
 });
 
-// This task creates a new GitHub release with the zipped file
-gulp.task('github:release', function(done) {
-  ghRelease({
-    repo: 'apex',
-    auth: {
-      token: process.env.GITHUB_TOKEN
-    },
-    tag: 'v1.0.0',
-    notes: 'Release notes for this version.',
-    assets: ['release/release.zip']
-  }, function(err, result) {
-    if (err) {
-      console.error(err);
-      done(err);
-      return;
-    }
-    console.log('Release was successful! Check it on GitHub.');
+const fs = require('fs');
+
+function getNextVersion(currentVersion) {
+    let [major, minor, patch] = currentVersion.slice(1).split('.').map(Number); // slice to remove 'v' prefix
+    patch++;
+    return `v${major}.${minor}.${patch}`;
+}
+
+// This can be a gulp task
+gulp.task('bump-version', function(done) {
+    const currentVersion = 'v1.0.4'; // This could be read from a file or retrieved from the last GitHub tag.
+    const nextVersion = getNextVersion(currentVersion);
+    
+    // Now you'd update wherever you store the current version. For example:
+    fs.writeFileSync('VERSION.txt', nextVersion);
     done();
+});
+
+const { execSync } = require('child_process');
+
+gulp.task('update-changelog', function(done) {
+    const lastVersion = 'v1.0.4'; // This could be read from a file or retrieved from the last GitHub tag.
+    const nextVersion = getNextVersion(lastVersion);
+    
+    // Get all commit messages since last version
+    const commits = execSync(`git log ${lastVersion}..HEAD --oneline`).toString().trim();
+    
+    // Append to changelog
+    const changelog = fs.readFileSync('CHANGELOG.md', 'utf8');
+    fs.writeFileSync('CHANGELOG.md', `## ${nextVersion}\n\n${commits}\n\n${changelog}`);
+    
+    done();
+});
+
+gulp.task('github:release', function(done) {
+  const nextVersion = getNextVersion('v1.0.4'); // Again, the version can be read from a file.
+
+  ghRelease({
+      repo: 'apex',
+      auth: {
+          token: process.env.GITHUB_TOKEN
+      },
+      tag: nextVersion, // Use the new version
+      notes: 'Release notes for this version.', // This can be read from the updated CHANGELOG.md file
+      assets: ['release/release.zip']
+  }, function(err, result) {
+      // ... existing logic
   });
 });
+
+gulp.task('release', gulp.series('bump-version', 'update-changelog', 'zip', 'github:release'));
 
 // Build task
 gulp.task("build", gulp.series(
@@ -211,5 +242,3 @@ gulp.task("build", gulp.series(
 
 // Default task
 gulp.task("default", gulp.series("build"));
-
-gulp.task('release', gulp.series('zip', 'github:release'));
