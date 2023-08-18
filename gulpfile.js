@@ -12,7 +12,11 @@ var gulp = require('gulp'),
   purgecss = require('gulp-purgecss'),
   fileinclude = require('gulp-file-include'),
   htmlbeautify = require('gulp-html-beautify'),
+  zip = require('gulp-zip'),
+  ghRelease = require('gh-release'),
   browserSync = require('browser-sync').create();
+  
+  require('dotenv').config();
 
 // Clean task
 gulp.task('clean', function() {
@@ -165,6 +169,32 @@ gulp.task('beautify-html', function() {
     .pipe(gulp.dest('dist/'))
 });
 
+// This task creates a zip archive from the 'dist' directory
+gulp.task('zip', function() {
+  return gulp.src('dist/**/*')
+    .pipe(zip('release.zip'))
+    .pipe(gulp.dest('release'));
+});
+
+// This task creates a new GitHub release with the zipped file
+gulp.task('github:release', function(done) {
+  ghRelease({
+    repo: 'fysalyaqoob/apex', // Replace 'username/repo' with your GitHub username and repo name
+    token: process.env.GITHUB_TOKEN, // Make sure to set your GitHub token as an environment variable or replace with your token string
+    tag: 'v1.0.0', // Replace with your desired tag/version
+    notes: 'Release notes for this version.', // Replace with your release notes
+    assets: ['release/release.zip']
+  }, function(err, result) {
+    if (err) {
+      console.error(err);
+      done(err);
+      return;
+    }
+    console.log('Release was successful! Check it on GitHub.');
+    done();
+  });
+});
+
 // Build task
 gulp.task("build", gulp.series(
   "clean",
@@ -179,3 +209,5 @@ gulp.task("build", gulp.series(
 
 // Default task
 gulp.task("default", gulp.series("build"));
+
+gulp.task('release', gulp.series('zip', 'github:release'));

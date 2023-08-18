@@ -30,11 +30,13 @@
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.2",
-    "browser": "^0.2.6"
+    "browser": "^0.2.6",
+    "dotenv": "^16.3.1"
   },
   "devDependencies": {
     "browser-sync": "^2.27.10",
     "del": "^3.0.0",
+    "gh-release": "^7.0.2",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-cheerio": "^1.0.0",
@@ -49,6 +51,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^5.1.0",
     "merge-stream": "^1.0.1",
     "sass": "^1.65.1"
   }
