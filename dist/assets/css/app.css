@@ -12044,6 +12044,16 @@ textarea.form-control-lg {
   color: rgba(255, 255, 255, 0.75);
 }
 
+.cart-dropdown .dropdown-menu[data-bs-popper] {
+  left: auto;
+  right: 0;
+  width: calc(100% - 14px);
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #2f3382;
+  font-size: 14px;
+}
+
 .home-hero {
   position: relative;
   background-color: #2f3382;
