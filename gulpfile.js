@@ -210,8 +210,11 @@ gulp.task('update-changelog', function(done) {
     done();
 });
 
+const releaseNotes = '...';
+
+// This task creates a new GitHub release with the zipped file
 gulp.task('github:release', function(done) {
-  const nextVersion = getNextVersion('v1.0.4'); // Again, the version can be read from a file.
+  const nextVersion = getNextVersion('v1.0.4'); // The version can be read from a file.
 
   ghRelease({
       repo: 'apex',
@@ -220,11 +223,19 @@ gulp.task('github:release', function(done) {
       },
       tag: nextVersion, // Use the new version
       notes: 'Release notes for this version.', // This can be read from the updated CHANGELOG.md file
-      assets: ['release/release.zip']
+      assets: ['release/release.zip'],
+      body: releaseNotes // Corrected this line
   }, function(err, result) {
-      // ... existing logic
+    if (err) {
+      console.error(err);
+      done(err);
+      return;
+    }
+    console.log('Release was successful! Check it on GitHub.');
+    done();
   });
 });
+
 
 gulp.task('release', gulp.series('bump-version', 'update-changelog', 'zip', 'github:release'));
 
