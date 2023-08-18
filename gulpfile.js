@@ -15,7 +15,7 @@ var gulp = require('gulp'),
   zip = require('gulp-zip'),
   ghRelease = require('gh-release'),
   browserSync = require('browser-sync').create();
-  
+
   require('dotenv').config();
 
 // Clean task
@@ -179,10 +179,12 @@ gulp.task('zip', function() {
 // This task creates a new GitHub release with the zipped file
 gulp.task('github:release', function(done) {
   ghRelease({
-    repo: 'fysalyaqoob/apex', // Replace 'username/repo' with your GitHub username and repo name
-    token: process.env.GITHUB_TOKEN, // Make sure to set your GitHub token as an environment variable or replace with your token string
-    tag: 'v1.0.0', // Replace with your desired tag/version
-    notes: 'Release notes for this version.', // Replace with your release notes
+    repo: 'fysalyaqoob/apex',
+    auth: {
+      token: process.env.GITHUB_TOKEN
+    },
+    tag: 'v1.0.0',
+    notes: 'Release notes for this version.',
     assets: ['release/release.zip']
   }, function(err, result) {
     if (err) {
