@@ -3355,17 +3355,17 @@ textarea.form-control-lg {
   --bs-dropdown-padding-y: 0.5rem;
   --bs-dropdown-spacer: 0.125rem;
   --bs-dropdown-font-size: 1rem;
-  --bs-dropdown-color: var(--bs-body-color);
-  --bs-dropdown-bg: var(--bs-body-bg);
-  --bs-dropdown-border-color: var(--bs-border-color-translucent);
-  --bs-dropdown-border-radius: var(--bs-border-radius);
-  --bs-dropdown-border-width: var(--bs-border-width);
-  --bs-dropdown-inner-border-radius: calc(var(--bs-border-radius) - var(--bs-border-width));
-  --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
+  --bs-dropdown-color: #fff;
+  --bs-dropdown-bg: #1f9ded;
+  --bs-dropdown-border-color: inherit;
+  --bs-dropdown-border-radius: 0;
+  --bs-dropdown-border-width: 0;
+  --bs-dropdown-inner-border-radius: calc(0 - 0);
+  --bs-dropdown-divider-bg: inherit;
   --bs-dropdown-divider-margin-y: 0.5rem;
   --bs-dropdown-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  --bs-dropdown-link-color: var(--bs-body-color);
-  --bs-dropdown-link-hover-color: var(--bs-body-color);
+  --bs-dropdown-link-color: #fff;
+  --bs-dropdown-link-hover-color: #2f3382;
   --bs-dropdown-link-hover-bg: var(--bs-tertiary-bg);
   --bs-dropdown-link-active-color: #fff;
   --bs-dropdown-link-active-bg: #2f3382;
@@ -3627,11 +3627,11 @@ textarea.form-control-lg {
 .dropdown-menu-dark {
   --bs-dropdown-color: #dee2e6;
   --bs-dropdown-bg: #343a40;
-  --bs-dropdown-border-color: var(--bs-border-color-translucent);
+  --bs-dropdown-border-color: inherit;
   --bs-dropdown-box-shadow: ;
   --bs-dropdown-link-color: #dee2e6;
   --bs-dropdown-link-hover-color: #fff;
-  --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
+  --bs-dropdown-divider-bg: inherit;
   --bs-dropdown-link-hover-bg: rgba(255, 255, 255, 0.15);
   --bs-dropdown-link-active-color: #fff;
   --bs-dropdown-link-active-bg: #2f3382;
@@ -11988,6 +11988,70 @@ textarea.form-control-lg {
   font-stretch: normal;
   font-style: normal;
   letter-spacing: 0.34px;
+}
+@media (min-width: 992px) {
+  #primary-nav .nav-link {
+    padding-top: 24.5px;
+    padding-bottom: 24.5px;
+  }
+}
+
+.dropdown-mega {
+  position: static;
+  color: #fff;
+}
+.dropdown-mega .dropdown-menu {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 13px;
+  font-weight: normal;
+}
+.dropdown-mega .dropdown-heading {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+.dropdown-mega p {
+  margin-bottom: 10px;
+}
+.dropdown-mega .dd-heading2 {
+  font-weight: bold;
+}
+.dropdown-mega .featured-product-desc {
+  font-size: 11px;
+}
+.dropdown-mega .featured-pro-img > img {
+  border: 1px solid #fff;
+}
+
+.mega-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  line-height: 1.25;
+}
+.mega-links li {
+  margin-bottom: 15px;
+}
+.mega-links li a {
+  text-decoration: none;
+  color: #fff;
+}
+.mega-links li a:hover, .mega-links li a.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.cart-dropdown .dropdown-menu[data-bs-popper] {
+  left: auto;
+  right: 0;
+  width: calc(100% - 14px);
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #2f3382;
+  font-size: 14px;
 }
 
 .home-hero {

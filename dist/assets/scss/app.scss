@@ -53,6 +53,68 @@
   font-stretch: normal;
   font-style: normal;
   letter-spacing: 0.34px;
+  @include media-breakpoint-up(lg) {
+    .nav-link {
+      padding-top: 24.5px;
+      padding-bottom: 24.5px;
+    }
+  }
+}
+
+.dropdown-mega {
+  position: static;
+  color: #fff;
+
+  .dropdown-menu {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 13px;
+    font-weight: normal;
+  }
+
+  .dropdown-heading {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  .dd-heading2 {
+    font-weight: bold;
+  }
+
+  .featured-product-desc {
+    font-size: 11px;
+  }
+
+  .featured-pro-img {
+    > img {
+      border: 1px solid #fff;
+    }
+  }
+}
+
+.mega-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  line-height: 1.25;
+  li {
+    margin-bottom: 15px;
+    a {
+      text-decoration: none;
+      color: #fff;
+      &:hover, &.active {
+        color: rgba(#fff, 0.75);
+      }
+    }
+  }
 }
 
 .home-hero {

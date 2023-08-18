@@ -6,26 +6,29 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTopNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 position-relative align-items-center">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Log In</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Shopping Cart</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Check Out</a>
+                <li class="nav-item dropdown cart-dropdown position-static">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Check Out</a>
+                    <div class="dropdown-menu">
+                        test
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Account</a>
                 </li>
+                <li>
+                    <!-- Search form with icon inside the box -->
+                    <form class="d-flex searchbox">
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Search…" aria-label="Search">
+                        </div>
+                    </form>
+                </li>
             </ul>
-            <!-- Search form with icon inside the box -->
-            <form class="d-flex searchbox">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search…" aria-label="Search">
-                </div>
-            </form>
         </div>
     </div>
 </nav>
