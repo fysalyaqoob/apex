@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-5-sass-gulp-4",
-  "version": "1.0.5",
+  "version": "1.0.14",
   "description": "A Bootstrap 5.0.2 boilerplate with sass and gulp 4",
   "main": "index.js",
   "scripts": {
@@ -22,18 +22,17 @@
   ],
   "author": "Faisal Yaqoob",
   "license": "MIT",
-  "bugs": {
-    "url": ""
-  },
   "homepage": "https://github.com/fysalyaqoob/apex.git#readme",
   "dependencies": {
     "@popperjs/core": "^2.11.6",
-    "bootstrap": "^5.2.3",
-    "bootstrap-icons": "^1.10.2",
     "browser": "^0.2.6",
     "dotenv": "^16.3.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "babel-loader": "^9.1.3",
+    "bootstrap": "^5.3.1",
     "browser-sync": "^2.27.10",
     "del": "^3.0.0",
     "gh-release": "^7.0.2",
@@ -42,6 +41,7 @@
     "gulp-cheerio": "^1.0.0",
     "gulp-clean-css": "^3.9.4",
     "gulp-concat": "^2.6.1",
+    "gulp-file": "^0.4.0",
     "gulp-file-include": "^2.3.0",
     "gulp-html-beautify": "^1.0.1",
     "gulp-html-replace": "^1.6.2",
@@ -53,6 +53,9 @@
     "gulp-uglify": "^3.0.2",
     "gulp-zip": "^5.1.0",
     "merge-stream": "^1.0.1",
-    "sass": "^1.65.1"
+    "sass": "^1.65.1",
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack": "^5.88.2",
+    "webpack-stream": "^7.0.0"
   }
 }
