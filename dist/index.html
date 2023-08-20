@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="site-header">
         <!-- Top Nav -->
         <nav id="top-nav" class="navbar navbar-expand-lg navbar-light">
             <div class="container">
@@ -28,11 +28,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Log In</a>
                         </li>
+                        <li class="nav-item position-static">
+                            <a class="nav-link" data-bs-toggle="offcanvas" href="#cartOffcanvas" role="button" aria-controls="cartOffcanvas">
+                                <span class="visually-hidden-focusable">Shopping Cart</span>
+                                <img src="assets/img/cart-icon.svg" alt="Shopping Cart" width="25" height="20" />
+                            </a>
+                        </li>
                         <li class="nav-item dropdown cart-dropdown position-static">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Check Out</a>
-                            <div class="dropdown-menu">
-                                test
-                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Account</a>
@@ -409,6 +412,65 @@
             </div>
         </div>
     </footer>
+
+    <!-- Offcanvas sidebar for shopping cart -->
+    <div class="offcanvas offcanvas-end show" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 id="cartOffcanvasLabel">Shopping Cart</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Product 1 -->
+            <div class="d-flex justify-content-between mb-2 border-bottom border-dark pb-3 mb-4">
+                <div class="product-in-cart">
+                    <div class="product-title">Product 1 Title</div>
+                    <div class="product-sku">SKU: 1001</div>
+                    <div class="product-quantity">Qty: 1</div>
+                    <div class="product-price">$10.00</div>
+                </div>
+                <!-- Close icon to remove product -->
+                <button type="button" class="btn-close align-self-start" aria-label="Remove Product"></button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="d-flex justify-content-between mb-2 border-bottom border-dark pb-3 mb-4">
+                <div class="product-in-cart">
+                    <div class="product-title">Product 2 Title</div>
+                    <div class="product-sku">SKU: 1002</div>
+                    <div class="product-quantity">Qty: 1</div>
+                    <div class="product-price">$15.00</div>
+                </div>
+                <!-- Close icon to remove product -->
+                <button type="button" class="btn-close align-self-start" aria-label="Remove Product"></button>
+            </div>
+
+            <!-- Shipping cost -->
+            <div class="d-flex justify-content-between mb-2">
+                <strong>Shipping Cost</strong>
+                <strong class="text-primary">$5.00</strong>
+            </div>
+
+            <!-- Total amount -->
+            <div class="d-flex justify-content-between mb-2">
+                <strong>Total Amount</strong>
+                <strong class="text-primary">$30.00</strong>
+            </div>
+
+            <!-- View and Checkout buttons -->
+            <div class="d-flex flex-column align-items-end pt-2">
+                <a href="#" class="button mt-2">View Cart</a>
+                <a href="#" class="button mt-2">Checkout</a>
+            </div>
+        </div>
+    </div>
+    <div class="position-fixed top-0 end-0" style="z-index: 11">
+        <div id="liveToast" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body">
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                Apex Flavors will be closed from 6/28 to 7/5 for inventory and the July 4th Holiday. The last day for shipping will be 6/27.
+            </div>
+        </div>
+    </div>
 
     <script src="assets/js/app.min.js"></script>
 </body>

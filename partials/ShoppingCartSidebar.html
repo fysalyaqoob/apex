@@ -1,0 +1,50 @@
+<!-- Offcanvas sidebar for shopping cart -->
+<div class="offcanvas offcanvas-end show" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header">
+        <h5 id="cartOffcanvasLabel">Shopping Cart</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <!-- Product 1 -->
+        <div class="d-flex justify-content-between mb-2 border-bottom border-dark pb-3 mb-4">
+            <div class="product-in-cart">
+                <div class="product-title">Product 1 Title</div>
+                <div class="product-sku">SKU: 1001</div>
+                <div class="product-quantity">Qty: 1</div>
+                <div class="product-price">$10.00</div>
+            </div>
+            <!-- Close icon to remove product -->
+            <button type="button" class="btn-close align-self-start" aria-label="Remove Product"></button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="d-flex justify-content-between mb-2 border-bottom border-dark pb-3 mb-4">
+            <div class="product-in-cart">
+                <div class="product-title">Product 2 Title</div>
+                <div class="product-sku">SKU: 1002</div>
+                <div class="product-quantity">Qty: 1</div>
+                <div class="product-price">$15.00</div>
+            </div>
+            <!-- Close icon to remove product -->
+            <button type="button" class="btn-close align-self-start" aria-label="Remove Product"></button>
+        </div>
+
+        <!-- Shipping cost -->
+        <div class="d-flex justify-content-between mb-2">
+            <strong>Shipping Cost</strong>
+            <strong class="text-primary">$5.00</strong>
+        </div>
+
+        <!-- Total amount -->
+        <div class="d-flex justify-content-between mb-2">
+            <strong>Total Amount</strong>
+            <strong class="text-primary">$30.00</strong>
+        </div>
+
+        <!-- View and Checkout buttons -->
+        <div class="d-flex flex-column align-items-end pt-2">
+            <a href="#" class="button mt-2">View Cart</a>
+            <a href="#" class="button mt-2">Checkout</a>
+        </div>
+    </div>
+</div>
