@@ -4,8 +4,9 @@ const gulp = require('gulp'),
   sass = require('gulp-sass')(require('sass')),
   del = require('del'),
   cleanCSS = require('gulp-clean-css'),
+  gulpif = require('gulp-if'),
+  sourcemaps = require('gulp-sourcemaps'),
   rename = require("gulp-rename"),
-  htmlreplace = require('gulp-html-replace'),
   autoprefixer = require('gulp-autoprefixer'),
   fileinclude = require('gulp-file-include'),
   htmlbeautify = require('gulp-html-beautify'),
@@ -16,34 +17,29 @@ const gulp = require('gulp'),
 // Clean up 'dist' directory
 gulp.task('clean', () => del(['dist']));
 
-// Copy bootstrap SCSS files
-gulp.task('bootstrap:scss', () => gulp.src(['./node_modules/bootstrap/scss/**/*'])
-  .pipe(gulp.dest('./assets/scss/bootstrap')));
-
 // Compile and Minify SCSS to .min.css
-gulp.task('scss', gulp.series('bootstrap:scss', function compileScss() {
+gulp.task('scss', function compileScss() {
+  const scssOptions = {
+    outputStyle: 'expanded',
+    quietDeps: true,
+    sourceComments: false, // Exclude source comments
+  };
+
   return gulp.src(['./assets/scss/*.scss'])
-    .pipe(sass.sync({ outputStyle: 'expanded', quietDeps: true }).on('error', sass.logError))
+    .pipe(sass.sync(scssOptions).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(cleanCSS())
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(rename(function (path) {
+      path.basename += '.min';
+    }))
     .pipe(gulp.dest('./dist/assets/css'))
     .pipe(browserSync.stream());
-}));
-
-// Copy SCSS files without minification
-gulp.task('scss:copy', gulp.series('bootstrap:scss', function copyScss() {
-  return gulp.src(['./assets/scss/*.scss'])
-    .pipe(sass.sync({ outputStyle: 'expanded', quietDeps: true }).on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(gulp.dest('./dist/assets/css'))
-    .pipe(browserSync.stream());
-}));
+});
 
 const webpackConfig = {
-  mode: 'production',
+  mode: 'production', // Set mode to production only
   entry: {
-    app: './assets/js/app.js' // Specify the entry point for webpack
+    app: './assets/js/app.js' // Entry point for webpack
   },
   output: {
     filename: '[name].min.js'
@@ -63,7 +59,7 @@ const webpackConfig = {
     ]
   },
   optimization: {
-    minimize: true,
+    minimize: true, // Always minimize
     minimizer: [
       new TerserPlugin({
         extractComments: false,
@@ -80,27 +76,9 @@ gulp.task('js:webpack:minified', () => {
     .pipe(browserSync.stream());
 });
 
-// JS: Webpack (unminified)
-gulp.task('js:webpack:unminified', () => {
-  const unminifiedWebpackConfig = {
-    ...webpackConfig,
-    mode: 'development',
-    optimization: {
-      minimize: false,
-    },
-  };
-
-  return gulp.src('./assets/js/app.js')
-    .pipe(webpack(unminifiedWebpackConfig))
-    .pipe(rename({ suffix: '.unmin' }))
-    .pipe(gulp.dest('./dist/assets/js'))
-    .pipe(browserSync.stream());
-});
-
 // Process HTML partials
 gulp.task('html:partials', () => gulp.src(['*.html'])
   .pipe(fileinclude({ prefix: '@@', basepath: '@file' }))
-  .pipe(htmlreplace({ 'js': 'assets/js/app.min.js', 'css': 'assets/css/app.min.css' }))
   .pipe(gulp.dest('./dist/'))
   .pipe(browserSync.stream())
 );
@@ -119,20 +97,23 @@ gulp.task('beautify-html', () => {
 });
 
 // Main build task
-gulp.task("build", gulp.series("clean", gulp.parallel('scss', 'js:webpack:minified', /*'js:webpack:unminified',*/ 'scss:copy'), 'html:partials', 'copyAssets', 'beautify-html'));
+gulp.task("build", gulp.series("clean", gulp.parallel('scss', 'js:webpack:minified'), 'html:partials', 'copyAssets', 'beautify-html'));
 
 // Development task with file watcher
 gulp.task('dev', gulp.series('build', function watchChanges(done) {
   browserSync.init({ server: { baseDir: "./dist" } });
 
   // Watch SCSS files and run the SCSS task on changes
-  gulp.watch(['assets/scss/*.scss', 'assets/scss/**/*.scss', '!assets/scss/bootstrap/**'], gulp.series('scss'));
+  gulp.watch(['assets/scss/*.scss', 'assets/scss/**/*.scss', '!assets/scss/bootstrap/**'], gulp.series('scss'))
+    .on('change', browserSync.reload); // Reload browser on SCSS changes
 
-  // Process JS changes with Webpack (both minified and unminified)
-  gulp.watch('assets/js/**/*.js', gulp.parallel('js:webpack:minified', /*'js:webpack:unminified'*/));
+  // Process JS changes with Webpack (minified only)
+  gulp.watch('assets/js/**/*.js', gulp.parallel('js:webpack:minified'))
+    .on('change', browserSync.reload); // Reload browser on JS changes
 
   // Process HTML on changes
-  gulp.watch(['*.html', './partials/**/*.html'], gulp.series('html:partials'));
+  gulp.watch(['*.html', './partials/**/*.html'], gulp.series('html:partials'))
+    .on('change', browserSync.reload); // Reload browser on HTML changes
 
   done();
 }));
