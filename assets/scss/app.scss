@@ -297,6 +297,8 @@ img {
 .apx-flavors {
   margin-top: -100px;
   padding-bottom: 24px;
+  background: #fff url(../img/wood-bg.jpg) no-repeat top center;
+  background-size: cover;
 }
 
 .apx-box {
@@ -441,6 +443,7 @@ img {
 .apx-icons {
   padding-top: 36px;
   padding-bottom: 36px;
+  background: #fff url(../img/wood-bg.jpg) no-repeat center;
 
   .container {
     max-width: 760px;
