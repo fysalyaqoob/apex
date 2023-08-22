@@ -1,0 +1,32 @@
+<div class="modal fade" id="pricingModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h5 class="modal-title">Turn Whole Pricing On/Off</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form class="d-flex justify-content-between">
+                    <div class="pricingForm-left d-inline-flex align-items-center">
+                        <label for="pricingDropdown" class="me-2">Pricing:</label>
+                        <select id="pricingDropdown">
+                            <!-- Dropdown options for pricing -->
+                            <option>Web Customer</option>
+                            <option selected>Wholesaler</option> <!-- Default option is Wholesaler -->
+                            <option>Retail Store</option>
+                        </select>
+                    </div>
+                    <!-- Submit and Close button inline -->
+                    <div class="pricingForm-left">
+                        <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

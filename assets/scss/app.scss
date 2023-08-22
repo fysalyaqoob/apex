@@ -21,6 +21,22 @@
   }
 
   .searchbox {
+    .input-search {
+      padding-right: 24px;
+    }
+
+    .btn-search {
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
     @include media-breakpoint-up(lg) {
       margin-left: 14px;
     }
@@ -57,6 +73,22 @@
       padding-top: 24.5px;
       padding-bottom: 24.5px;
     }
+
+    .nav-item {
+      &.dropdown {
+        &:hover {
+          .dropdown-menu {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .has-submenu-right {
+      left: auto;
+      right: 0;
+    }
+
   }
 }
 
@@ -135,11 +167,14 @@
 .home-hero {
   position: relative;
   background-color: $primary;
-  overflow: hidden;
-  background-image: url(../img/hero@2x.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+
+  &:not(.parallax-container) {
+    overflow: hidden;
+    background-image: url(../img/hero@2x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 
   @include media-breakpoint-up(md) {
     max-height: 832px;
@@ -395,7 +430,7 @@ img {
 }
 
 .apx-carousel {
-  background: #ffb032 url(../img/i-stock-927810692@2x.png) no-repeat center;
+  background: #ffb032;
   background-size: cover;
   color: #fff;
   font-size: 17px;
@@ -406,10 +441,10 @@ img {
   letter-spacing: 0.34px;
   text-align: center;
 
-  .apx-carousel-inner {
+  .apx-item {
     padding-top: 32px;
-    padding-bottom: 14.5px;
-    background-color: rgba(#ffb032, 0.65);
+    padding-bottom: 44px;
+    min-height: 269px;
   }
 
   h3 {
@@ -426,13 +461,42 @@ img {
   }
 
   .apx-item {
-    max-width: 830px;
+    max-width: calc(100% - 150px);
+
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
+    }
+
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .carousel-arrows {
+    @extend .container;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+
+    .carousel-control-next,
+    .carousel-control-prev {
+      position: unset;
+      width: auto;
+    }
   }
 
   .carousel-indicators {
-    position: unset;
-    margin-top: 15px;
+    margin-bottom: 14.5px;
 
     [data-bs-target] {
       width: 8px;
@@ -545,12 +609,12 @@ img {
   &::before {
     border-left: 12.5px solid transparent;
     border-right: 12.5px solid transparent;
-    border-top: 25px solid #fff;            
+    border-top: 25px solid #fff;
     content: "";
     display: block;
     position: absolute;
     right: 0;
-    bottom: -16px;                          
+    bottom: -16px;
     transform: rotate(90deg) skew(-25deg);
     z-index: -1;
   }
@@ -558,11 +622,11 @@ img {
   &::after {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-top: 22px solid #0899fe;    
+    border-top: 22px solid #0899fe;
     display: block;
     position: absolute;
-    right: 1.5px;                            
-    bottom: -14.5px;                      
+    right: 1.5px;
+    bottom: -14.5px;
     transform: rotate(90deg) skew(-25deg);
     content: "";
   }
@@ -601,7 +665,8 @@ img {
     font-weight: 600;
   }
 
-  .product-quantity, .product-price {
+  .product-quantity,
+  .product-price {
     font-size: 16px;
     font-weight: bold;
   }
@@ -618,7 +683,7 @@ img {
 
 .button {
   display: inline-block;
-  background-color: #2f3382;
+  background-color: $primary;
   font-size: 18px;
   font-weight: 600;
   font-stretch: normal;
@@ -633,6 +698,7 @@ img {
   border: 1px solid #fff;
   width: calc(100% - 36px);
   transition: .21s ease background-color;
+
   &:after {
     content: '';
     background: url(../img/btn-icon.svg) no-repeat right center;
@@ -643,8 +709,29 @@ img {
     transform: translateY(-50%) scaleX(-1);
     left: -18px;
   }
+
   &:hover {
-    $btnHoverBg: darken(#2f3382, 10%);
+    $btnHoverBg: darken($primary, 10%);
     background-color: $btnHoverBg;
+  }
+}
+
+#pricingModal {
+  font-size: 14px;
+
+  .modal-content {
+    border-radius: 0;
+    border-color: #000;
+    color: $primary;
+  }
+
+  select {
+    color: $primary;
+    padding: 3px 0;
+    border-radius: 0;
+  }
+
+  .btn {
+    font-size: 14px;
   }
 }
