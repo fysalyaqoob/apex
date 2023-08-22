@@ -107,3 +107,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Function to implement the parallax effect on scroll with variable speeds
+function parallaxScrollEffectWithSpeed() {
+    // Get all the elements with the attribute 'data-parallax="scroll"'
+    const parallaxElements = document.querySelectorAll('[data-parallax="scroll"]');
+
+    // Loop through each of the elements
+    parallaxElements.forEach(element => {
+        const imagePath = element.getAttribute('data-image-src');
+        if (!imagePath) {
+            console.error("Element missing 'data-image-src' attribute.");
+            return;
+        }
+
+        // Get the speed from 'data-speed' attribute or set default to 0.5 if not found
+        const speed = parseFloat(element.getAttribute('data-speed')) || 0.5;
+
+        // Set the initial background of the element
+        element.style.backgroundImage = `url(${imagePath})`;
+        element.style.backgroundSize = 'cover';
+        element.style.backgroundPosition = 'center';
+
+        // Event listener for the scroll event
+        window.addEventListener('scroll', () => {
+            // Calculate the parallax offset
+            const scrolled = window.scrollY;
+            const offset = -(scrolled * speed) + 'px';
+            
+            // Set the background position
+            element.style.backgroundPosition = `center ${offset}`;
+        });
+    });
+}
+
+// Execute the parallax effect function once the document is fully loaded
+document.addEventListener('DOMContentLoaded', parallaxScrollEffectWithSpeed);
