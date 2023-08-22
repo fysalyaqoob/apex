@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Check if the parallax container is in the viewport
             if (scrollPosition > containerTop - window.innerHeight && scrollPosition < containerTop + parallaxContainers[index].offsetHeight) {
                 // Calculate the parallax offset based on how much of the container is visible
-                const parallaxOffset = (scrollPosition - containerTop) * 0.5;
+                const parallaxOffset = (scrollPosition - containerTop) * 0.3;
 
                 // Update the position of the current parallax background
                 background.style.transform = `translateY(${parallaxOffset}px)`;
@@ -106,3 +106,4 @@ document.addEventListener('DOMContentLoaded', function() {
         carouselIndicators.appendChild(indicator);
     });
 });
+

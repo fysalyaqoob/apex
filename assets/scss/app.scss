@@ -59,6 +59,28 @@
       color: $primary;
     }
   }
+
+  .cart-icon {
+    position: relative;
+  }
+
+  .cart-badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    right: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 }
 
 #primary-nav {
