@@ -180,12 +180,7 @@
 
     <main>
         <section class="home-hero">
-            <div class="hero-vimeo-bg">
-                <div class="ratio ratio-16x9">
-                    <iframe src="https://player.vimeo.com/video/856954893?autoplay=1&muted=1&loop=1&background=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay">
-                    </iframe>
-                </div>
-            </div>
+            <div data-vbg="https://vimeo.com/856954893"></div>
             <div class="container">
                 <div class="hh-content">
                     <div class="hh-heading">
@@ -209,7 +204,7 @@
                 </div>
             </div>
         </section>
-        <section class="apx-flavors" data-parallax="scroll" data-speed="0.3" data-image-src="/assets/img/wood-bg.jpg">
+        <section class="apx-flavors" data-parallax="scroll" data-speed="0.7" data-image-src="/assets/img/anne-nygard-aXQjBSH_f24-unsplash.jpg">
             <div class="container">
                 <div class="row">
                     <div class="apx-col-lg-4">
@@ -561,7 +556,7 @@
         </div>
     </div>
     <div class="position-fixed top-0 end-0" style="z-index: 11">
-        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div id="liveToast" class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-body">
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                 Apex Flavors will be closed from 6/28 to 7/5 for inventory and the July 4th Holiday. The last day for shipping will be 6/27.
@@ -602,6 +597,13 @@
     </div>
 
     <script src="assets/js/app.min.js"></script>
+    <script src="https://unpkg.com/youtube-background/jquery.youtube-background.min.js"></script>
+    <script>
+        // Initialize the youtube background player
+        jQuery(document).ready(function() {
+            jQuery('[data-vbg]').youtube_background();
+        });
+    </script>
 </body>
 
 </html>

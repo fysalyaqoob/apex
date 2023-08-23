@@ -25,3 +25,8 @@ cartTrigger.addEventListener("mouseover", function () {
 });
 
 import './custom';
+
+// Import jQuery
+import $ from 'jquery';
+window.jQuery = $;
+window.$ = $;

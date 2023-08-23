@@ -26,7 +26,9 @@
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "browser": "^0.2.6",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "jquery": "^3.7.0",
+    "youtube-background": "^1.0.14"
   },
   "devDependencies": {
     "@babel/core": "^7.22.10",
