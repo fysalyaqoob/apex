@@ -459,6 +459,12 @@ img {
   letter-spacing: 0.34px;
   text-align: center;
 
+  .carousel-item {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
   .apx-item {
     padding-top: 32px;
     padding-bottom: 44px;

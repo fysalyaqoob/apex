@@ -3,7 +3,7 @@
 const gulp = require('gulp'),
   sass = require('gulp-sass')(require('sass')),
   del = require('del'),
-  cleanCSS = require('gulp-clean-css'),
+  //cleanCSS = require('gulp-clean-css'),
   //gulpif = require('gulp-if'),
   //sourcemaps = require('gulp-sourcemaps'),
   path = require('path'),
@@ -31,9 +31,9 @@ gulp.task('scss', function compileScss() {
   return gulp.src(['./assets/scss/*.scss'])
     .pipe(sass.sync(scssOptions).on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(cleanCSS())
+    //.pipe(cleanCSS())
     .pipe(rename(function (path) {
-      path.basename += '.min';
+      //path.basename += '.min';
     }))
     .pipe(gulp.dest('./dist/assets/css'))
     .pipe(browserSync.stream());
@@ -70,6 +70,42 @@ const webpackConfig = {
     ],
   },
 };
+
+const webpackConfigUnminified = {
+  mode: 'development', // Set mode to development for non-minified output
+  entry: {
+    bootstrap: 'bootstrap/dist/js/bootstrap.bundle.js',  // This includes Bootstrap's JavaScript and Popper
+    jquery: 'jquery/dist/jquery.js'
+  },
+  output: {
+    filename: '[name].js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
+    ]
+  },
+  optimization: {
+    minimize: false, // Do not minimize
+  },
+};
+
+// JS: Webpack (unminified)
+gulp.task('js:webpack:unminified', () => {
+  return gulp.src('./assets/js/*.js') 
+    .pipe(webpack(webpackConfigUnminified))
+    .pipe(gulp.dest('./dist/assets/js'))
+    .pipe(browserSync.stream());
+});
 
 // JS: Webpack (minified)
 gulp.task('js:webpack:minified', () => {
@@ -133,7 +169,7 @@ gulp.task('optimize-videos', function(done) {
 
 
 // Copy assets to 'dist' directory excluding SCSS and app.js
-gulp.task("copyAssets", () => gulp.src(['!*.html', "assets/**/*", "!assets/scss/**", "!assets/js/app.js", "!assets/video/**"], { base: './' })
+gulp.task("copyAssets", () => gulp.src(['!*.html', "assets/**/*", "!assets/scss/**", "!assets/video/**"], { base: './' })
   .pipe(gulp.dest('dist'))
 );
 
@@ -145,8 +181,8 @@ gulp.task('beautify-html', () => {
     .pipe(gulp.dest('dist/'))
 });
 
-// Main build task
-gulp.task("build", gulp.series("clean", gulp.parallel('scss', 'js:webpack:minified'), 'html:partials', 'copyAssets', 'beautify-html', 'optimize-videos')); // Added 'optimize-videos' to the build series
+// Update Main build task
+gulp.task("build", gulp.series("clean", gulp.parallel('scss'), 'html:partials', 'copyAssets', 'beautify-html', 'optimize-videos'));
 
 // Development task with file watcher
 gulp.task('dev', gulp.series('build', function watchChanges(done) {
