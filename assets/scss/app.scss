@@ -429,17 +429,21 @@ img {
 }
 
 .apx-icons {
-  padding-top: 36px;
-  padding-bottom: 36px;
   background: #fff url(../img/wood-bg.jpg) no-repeat bottom center;
   background-size: cover;
+
+  .apx-icons-inner {
+    background-color: rgba(#fff, 0.45);
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
 
   .container {
     max-width: 760px;
   }
 
   .apx-icon {
-    opacity: 0.37;
+    opacity: 0.5;
   }
 }
 
