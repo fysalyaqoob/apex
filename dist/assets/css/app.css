@@ -12095,7 +12095,7 @@ textarea.form-control-lg {
 
 .home-hero {
   position: relative;
-  background: #2f3382 url(../img/hero.jpeg) no-repeat center;
+  background: #2f3382;
   background-size: cover;
   padding: 250px 0;
   overflow: hidden;
