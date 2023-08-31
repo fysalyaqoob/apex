@@ -793,3 +793,90 @@ img {
   }
 }
 /* #404 page CSS */
+
+/* Login Page */
+.breadcrumb {
+  font-size: 15px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  text-align: left;
+  color: #828282;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }  
+}
+
+.login-wrapper {
+  legend, h3 {
+    font-size: 17px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: 0.34px;
+    color: #000;
+  }
+  .form-label {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 2.18;
+    letter-spacing: 0.3px;
+    margin-bottom: 0;
+  }
+  .form-control {
+    background-color: $secondary;
+    border-color: $secondary;
+    border-radius: 0;
+    padding: 0 10px;
+    font-size: 15px;
+  }
+
+  .btn-primary {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 2.18;
+    letter-spacing: 0.3px;
+    border-radius: 0;
+    padding: 0 16px 0 26px;
+    margin-left: 16px;
+    height: 32px;
+    text-align: center;
+    position: relative;
+    &::before {
+      position: absolute;
+      left: -16px;
+      top: -1px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      content: '';
+      border: 1.5px solid #fff;
+      background-image: url("data:image/svg+xml,%3Csvg width='32px' height='32px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48.83 48.83'%3E%3Ccircle cx='24.42' cy='24.42' r='24.42' transform='translate(-9.04 32.94) rotate(-59.3)' style='fill:%232f3382;'%3E%3C/circle%3E%3Cpolygon points='35.55 24.42 27.46 31.31 19.38 38.2 19.38 30.76 26.82 24.42 19.38 18.06 19.38 10.63 27.46 17.52 35.55 24.42' style='fill:%23FFFFFF;'%3E%3C/polygon%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.createAccount {
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: 0.34px;
+  text-align: left;
+  color: #000;
+  border: 1px solid $primary;
+  padding: 20px 20px 30px 20px;
+  ul {
+    margin-bottom: 30px;
+  }
+}
+/* #Login Page */

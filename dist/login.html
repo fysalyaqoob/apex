@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Apex Flavors</title>
+
+    <!-- Favicons -->
+    <link rel="icon" href="assets/img/favicons/favicon.ico">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="https://use.typekit.net/fyh8ndb.css">
+    <link href="assets/css/app.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header class="site-header">
+        <!-- Top Nav -->
+<nav id="top-nav" class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTopNav"
+            aria-controls="navbarTopNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTopNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 position-relative align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Log In</a>
+                </li>
+                <li class="nav-item position-static">
+                    <a id="cartTrigger" class="nav-link position-relative" data-bs-toggle="offcanvas" href="#cartOffcanvas" role="button"
+                        aria-controls="cartOffcanvas">
+                        <span class="visually-hidden-focusable">Shopping Cart</span>
+                        <img class="cart-icon" src="assets/img/cart-icon.svg" alt="Shopping Cart" width="25" height="20" />
+                        <span class="cart-badge">3</span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown cart-dropdown position-static">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Check Out</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Account</a>
+                </li>
+                <li class="nav-item position-static">
+                    <a role="button" class="nav-link" data-bs-toggle="modal" href="#pricingModal">
+                        <span class="visually-hidden-focusable">Turn Whole Pricing On/Off</span>
+                        <img src="assets/img/truck-icon.svg" alt="Pricing" width="40" height="22" />
+                    </a>
+                </li>
+                <li class="nav-item position-static">
+                    <a role="button" class="nav-link" id="liveToastBtn">
+                        <span class="visually-hidden-focusable">Notification</span>
+                        <img src="assets/img/message-icon.png" alt="Notification" width="21" height="21" />
+                    </a>
+                </li>
+                <li class="searchbox">
+                    <!-- Search form with icon inside the box -->
+                    <div class="input-group position-relative">
+                        <input class="form-control input-search" type="text" placeholder="Search…" aria-label="Search">
+                        <button type="submit" class="btn btn-link btn-search position-absolute p-0">
+                            <span class="visually-hidden-focusable">Search</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+        <!-- Secondary Nav with Logo -->
+<nav id="primary-nav" class="navbar navbar-expand-lg navbar-dark bg-primary py-lg-0">
+    <div class="container pe-lg-0">
+        <a class="navbar-brand" href="#">
+            <img src="assets/img/logo.png" srcset="assets/img/logo@2x.png 2x, assets/img/logo@3x.png 3x"
+                alt="Apex Flavors" width="252" height="26" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLogoNav"
+            aria-controls="navbarLogoNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarLogoNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 position-relative w-100 justify-content-lg-end">
+                <li class="nav-item dropdown dropdown-mega">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">All Products</a>
+                    <div class="dropdown-menu">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <ul class="mega-links">
+                                        <li><a href="#">Alcoholic Beverage Flavors</a></li>
+
+                                        <li><a href="#">Non-Alcoholic Beverage Flavors</a></li>
+
+                                        <li><a href="#">Pet Care Flavors</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3">
+                                    <ul class="mega-links">
+                                        <li><a href="#">Baking - Other Food Application Flavors</a></li>
+
+                                        <li><a href="#">Vanilla Products</a></li>
+
+                                        <li><a href="#">Ice Cream Flavors</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3">
+                                    <ul class="mega-links">
+                                        <li><a href="#">Clean Label – Propylene Glycol Free & Non GMO Extracts &
+                                                Flavors</a></li>
+
+                                        <li><a href="#">Botanical Extracts And Natural Antioxidants</a></li>
+
+                                        <li><a href="#">Tea Extracts</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3">
+                                    <ul class="mega-links">
+                                        <li><a href="#">Oil Soluble Flavors</a></li>
+
+                                        <li><a href="#">Varietal Chili Extracts And Flavors</a></li>
+
+                                        <li><a href="#">New Extracts And Flavors</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown dropdown-mega">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Featured Products
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="mega-content">
+                            <div class="container-fluid">
+                                <div class="row align-items-center">
+                                    <div class="col-lg pt-3">
+                                        <div class="dropdown-heading">Oil Soluble Flavors</div>
+                                        <p>We formulate these oil soluble flavors specifically for use in CBD tinctures,
+                                            edibles and other applications requiring high impact oil soluble flavors.
+                                            They are compatible with most fixed oils including fractionated coconut oil
+                                            (MCT or medium chain triglycerides). We can also custom formulate flavors to
+                                            meet specific strength, solubility, masking and other criteria.</p>
+                                    </div>
+                                    <div class="col-lg">
+                                        <div class="row flex-row-reverse">
+                                            <div class="col-lg-5">
+                                                <div class="featured-pro-img">
+                                                    <img src="assets/img/featured-product.jpg" alt="product" width="104"
+                                                        height="188" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-7">
+                                                <div class="featured-product-desc">
+                                                    <div class="dd-heading2">Featured Product</div>
+                                                    <p><strong>Pina Colada Type, Natural Flavor Blend (Oil
+                                                            Soluble)</strong></p>
+                                                    <p>Pina Colada Type, Natural Flavor Blend (Oil Soluble) was
+                                                        developed was developed for use in candies and confectionery and
+                                                        other products requiring oil soluble flavors. We recommend a
+                                                        starting use level of 0.25% to 0.50%.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">New Products</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    </header>
+
+    <main>
+        <nav class="bg-secondary" aria-label="breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Login</li>
+        </ol>
+    </div>
+</nav>
+        <div class="login-wrapper pt-5">
+            <div class="container">
+                <h1 class="text-primary fw-semibold mb-4">Sign Up /Login</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="loginForm mb-5">
+                            <fieldset>
+                                <legend>Login to Your Apex Flavors Account</legend>
+                                <div class="mb-3">
+                                    <label for="loginEmail" class="form-label">Email</label>
+                                    <input type="email" id="loginEmail" class="form-control">
+                                </div>
+                                <div class="mb-3 pb-3">
+                                    <label for="loginPassword" class="form-label">Password</label>
+                                    <input type="passowrd" id="loginPassword" class="form-control">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="col-md-5 offset-md-1">
+                        <div class="createAccount mb-5">
+                            <h3>Create an Apex Flavors Online Account</h3>
+
+                            <p>Anyone can register to enjoy:</p>
+
+                            <ul>
+                                <li>Faster checkout</li>
+                                <li>Easy access to your order status</li>
+                                <li>Convenient access to your past orders</li>
+                            </ul>
+
+                            <a href="#" class="btn btn-primary">Create An Account</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="orderWithOutApex mb-5">
+                            <h3>Ordered Without a Apex Flavors Online Account</h3>
+
+                            <div class="mb-3">
+                                <label class="form-label">Order Number:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            
+                            <div class="mb-3"><label class="form-label">Billing Address Last Name:</label>
+                            <input type="text" class="form-control">
+                            </div>
+                             
+                            <div class="mb-3"><label class="form-label">Billing Address Zip Code:</label>
+                            <input type="text" class="form-control">
+                            </div>
+                            
+                            <p><em>International customers, if no postal code, leave blank.</em></p>
+                            
+                            <button type="button" class="btn btn-primary mt-3">FInd my order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-nav">
+    <div class="container">
+        <ul class="nav justify-content-center">
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Help/FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Request for Documentation</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Price Drop</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">SDS Data</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Request Custom Flavor</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Create an Account/Wholesale Access</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Privacy Policy</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Cancelling an Order and Return Policy</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Flavoring Coffee</a></li>
+        </ul>
+    </div>
+</div>
+        <div class="footer-copy">
+    <div class="container">  
+        <p class="small mb-1">Our products are not sold for use in e-cigarettes or other similar electronic smoking devices. We do not supply e-liquid manufacturers or home hobbyists making e-liquids.</p>
+        
+        <p class="mb-0">1361 Brass Mill Rd. Suite E, Belcamp, MD 21017<span class="px-4">|</span>410-565-6600</p>
+        <p>Copyright 2023 Apex Flavors <span class="px-4">|</span> All Rights Reserved.</p>
+    </div>
+</div>
+    </footer>
+
+    <!-- Offcanvas sidebar for shopping cart -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header">
+        <h5 id="cartOffcanvasLabel">Shopping Cart</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <!-- Product 1 -->
+        <div class="d-flex justify-content-between mb-2 border-bottom border-dark pb-3 mb-4">
+            <div class="product-in-cart">
+                <div class="product-title">Product 1 Title</div>
+                <div class="product-sku">SKU: 1001</div>
+                <div class="product-quantity">Qty: 1</div>
+                <div class="product-price">$10.00</div>
+            </div>
+            <!-- Close icon to remove product -->
+            <button type="button" class="btn-close align-self-start" aria-label="Remove Product"></button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="d-flex justify-content-between mb-2 border-bottom border-dark pb-3 mb-4">
+            <div class="product-in-cart">
+                <div class="product-title">Product 2 Title</div>
+                <div class="product-sku">SKU: 1002</div>
+                <div class="product-quantity">Qty: 1</div>
+                <div class="product-price">$15.00</div>
+            </div>
+            <!-- Close icon to remove product -->
+            <button type="button" class="btn-close align-self-start" aria-label="Remove Product"></button>
+        </div>
+
+        <!-- Shipping cost -->
+        <div class="d-flex justify-content-between mb-2">
+            <strong>Shipping Cost</strong>
+            <strong class="text-primary">$5.00</strong>
+        </div>
+
+        <!-- Total amount -->
+        <div class="d-flex justify-content-between mb-2">
+            <strong>Total Amount</strong>
+            <strong class="text-primary">$30.00</strong>
+        </div>
+
+        <!-- View and Checkout buttons -->
+        <div class="d-flex flex-column align-items-end pt-2">
+            <a href="#" class="button mt-2">View Cart</a>
+            <a href="#" class="button mt-2">Checkout</a>
+        </div>
+    </div>
+</div>
+    <div class="position-fixed top-0 end-0" style="z-index: 11">
+  <div id="liveToast" class="toast show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+    <div class="toast-body">
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        Apex Flavors will be closed from 6/28 to 7/5 for inventory and the July 4th Holiday. The last day for shipping will be 6/27.
+    </div>
+  </div>
+</div>
+    <div class="modal fade" id="pricingModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h5 class="modal-title">Turn Whole Pricing On/Off</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form class="d-flex justify-content-between">
+                    <div class="pricingForm-left d-inline-flex align-items-center">
+                        <label for="pricingDropdown" class="me-2">Pricing:</label>
+                        <select id="pricingDropdown">
+                            <!-- Dropdown options for pricing -->
+                            <option>Web Customer</option>
+                            <option selected>Wholesaler</option> <!-- Default option is Wholesaler -->
+                            <option>Retail Store</option>
+                        </select>
+                    </div>
+                    <!-- Submit and Close button inline -->
+                    <div class="pricingForm-left">
+                        <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/youtube-background/jquery.youtube-background.min.js"></script>
+<script>
+// Initialize the youtube background player
+jQuery(document).ready(function() {
+  jQuery('[data-vbg]').youtube_background();
+});
+
+</script>
+
+<script src="assets/js/app.js"></script>
+</body>
+
+</html>

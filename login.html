@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Apex Flavors</title>
+
+    <!-- Favicons -->
+    <link rel="icon" href="assets/img/favicons/favicon.ico">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="https://use.typekit.net/fyh8ndb.css">
+    <link href="assets/css/app.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header class="site-header">
+        @@include('./partials/top-nav.html')
+        @@include('./partials/primary-nav.html')
+    </header>
+
+    <main>
+        @@include('./partials/breadcrumbs.html')
+        <div class="login-wrapper pt-5">
+            <div class="container">
+                <h1 class="text-primary fw-semibold mb-4">Sign Up /Login</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="loginForm mb-5">
+                            <fieldset>
+                                <legend>Login to Your Apex Flavors Account</legend>
+                                <div class="mb-3">
+                                    <label for="loginEmail" class="form-label">Email</label>
+                                    <input type="email" id="loginEmail" class="form-control">
+                                </div>
+                                <div class="mb-3 pb-3">
+                                    <label for="loginPassword" class="form-label">Password</label>
+                                    <input type="passowrd" id="loginPassword" class="form-control">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="col-md-5 offset-md-1">
+                        <div class="createAccount mb-5">
+                            <h3>Create an Apex Flavors Online Account</h3>
+
+                            <p>Anyone can register to enjoy:</p>
+
+                            <ul>
+                                <li>Faster checkout</li>
+                                <li>Easy access to your order status</li>
+                                <li>Convenient access to your past orders</li>
+                            </ul>
+
+                            <a href="#" class="btn btn-primary">Create An Account</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="orderWithOutApex mb-5">
+                            <h3>Ordered Without a Apex Flavors Online Account</h3>
+
+                            <div class="mb-3">
+                                <label class="form-label">Order Number:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            
+                            <div class="mb-3"><label class="form-label">Billing Address Last Name:</label>
+                            <input type="text" class="form-control">
+                            </div>
+                             
+                            <div class="mb-3"><label class="form-label">Billing Address Zip Code:</label>
+                            <input type="text" class="form-control">
+                            </div>
+                            
+                            <p><em>International customers, if no postal code, leave blank.</em></p>
+                            
+                            <button type="button" class="btn btn-primary mt-3">FInd my order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        @@include('./partials/footer-nav.html')
+        @@include('./partials/footer-copy.html')
+    </footer>
+
+    @@include('./partials/ShoppingCartSidebar.html')
+    @@include('./partials/floatingMessage.html')
+    @@include('./partials/pricingModal.html')
+
+    @@include('./partials/scripts.html')
+</body>
+
+</html>

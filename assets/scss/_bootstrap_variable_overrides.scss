@@ -1,5 +1,6 @@
 // Bootstrap overrides variables
 $primary: #2f3382;
+$secondary: #efeff0;
 $body-color: #333;
 $font-family-sans-serif: 'aileron', sans-serif;
 $font-family-base: $font-family-sans-serif;
@@ -29,3 +30,6 @@ $dropdown-link-color: #fff;
 $dropdown-link-hover-color: $primary;
 
 $carousel-transition-duration: .41s;
+
+$breadcrumb-divider: quote(">");
+$breadcrumb-active-color: #000;
