@@ -2,19 +2,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   const toastTrigger = document.getElementById('liveToastBtn');
   const toastLiveExample = document.getElementById('liveToast');
-  
+
   if (toastTrigger) {
-      toastTrigger.addEventListener('click', () => {
-          const toast = new bootstrap.Toast(toastLiveExample);
-  
-          // Check if 'show' class is not present
-          if (!toastLiveExample.classList.contains('show')) {
-              // If 'show' class is not present, show the toast
-              toast.show();
-          }
-          // If 'show' class is already present, do nothing
-      });
-  }  
+    toastTrigger.addEventListener('click', () => {
+      const toast = new bootstrap.Toast(toastLiveExample);
+
+      // Check if 'show' class is not present
+      if (!toastLiveExample.classList.contains('show')) {
+        // If 'show' class is not present, show the toast
+        toast.show();
+      }
+      // If 'show' class is already present, do nothing
+    });
+  }
 
   // Get the cartTrigger element
   var cartTrigger = document.getElementById("cartTrigger");
@@ -55,57 +55,73 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   // Attach the function to the window's scroll event
   window.addEventListener('scroll', handleParallax);
-/*
-  // Check if the site-header and floating window elements exist on the page
-  let siteHeader = document.querySelector('.site-header');
-  let floatingWindow = document.querySelector('#liveToast');
-
-  if (siteHeader && floatingWindow) {
-    // Get the height of the site-header
-    let siteHeaderHeight = siteHeader.offsetHeight;
-
-    // Calculate the top position with the extra 35px
-    let topPosition = siteHeaderHeight + 35;
-
-    // Set the top position of the floating window
-    floatingWindow.style.top = `${topPosition}px`;
-  }
-
-  // Adjust position on window resize to make it responsive
-  window.addEventListener('resize', function () {
+  /*
+    // Check if the site-header and floating window elements exist on the page
+    let siteHeader = document.querySelector('.site-header');
+    let floatingWindow = document.querySelector('#liveToast');
+  
     if (siteHeader && floatingWindow) {
-      siteHeaderHeight = siteHeader.offsetHeight;
-      topPosition = siteHeaderHeight + 35;
+      // Get the height of the site-header
+      let siteHeaderHeight = siteHeader.offsetHeight;
+  
+      // Calculate the top position with the extra 35px
+      let topPosition = siteHeaderHeight + 35;
+  
+      // Set the top position of the floating window
       floatingWindow.style.top = `${topPosition}px`;
     }
-  });
-*/
+  
+    // Adjust position on window resize to make it responsive
+    window.addEventListener('resize', function () {
+      if (siteHeader && floatingWindow) {
+        siteHeaderHeight = siteHeader.offsetHeight;
+        topPosition = siteHeaderHeight + 35;
+        floatingWindow.style.top = `${topPosition}px`;
+      }
+    });
+  */
 
   adjustSubmenuPosition();
   window.addEventListener('resize', adjustSubmenuPosition);
 
   const carousel = document.querySelector('#apxCarousel');
-  const carouselInner = carousel.querySelector('.carousel-inner');
-  const carouselItems = carouselInner.querySelectorAll('.carousel-item');
-  const carouselIndicators = carousel.querySelector('.carousel-indicators');
+  if (carousel) {
+    const carouselInner = carousel.querySelector('.carousel-inner');
+    const carouselItems = carouselInner.querySelectorAll('.carousel-item');
+    const carouselIndicators = carousel.querySelector('.carousel-indicators');
 
-  // Clear existing indicators
-  carouselIndicators.innerHTML = '';
+    // Clear existing indicators
+    carouselIndicators.innerHTML = '';
 
-  carouselItems.forEach((item, index) => {
-    const indicator = document.createElement('button');
-    indicator.type = 'button';
-    indicator.dataset.bsTarget = '#apxCarousel';
-    indicator.dataset.bsSlideTo = index;
-    indicator.setAttribute('aria-label', `Slide ${index + 1}`);
+    carouselItems.forEach((item, index) => {
+      const indicator = document.createElement('button');
+      indicator.type = 'button';
+      indicator.dataset.bsTarget = '#apxCarousel';
+      indicator.dataset.bsSlideTo = index;
+      indicator.setAttribute('aria-label', `Slide ${index + 1}`);
 
-    if (index === 0) {
-      indicator.classList.add('active');
-      indicator.setAttribute('aria-current', 'true');
-    }
+      if (index === 0) {
+        indicator.classList.add('active');
+        indicator.setAttribute('aria-current', 'true');
+      }
 
-    carouselIndicators.appendChild(indicator);
-  });
+      carouselIndicators.appendChild(indicator);
+    });
+  }
+
+  let table = document.querySelector('.product-loop');
+
+  if (table) { // Check if the table with class 'product-loop' exists
+      let headers = Array.from(document.querySelectorAll('.product-loop thead th')).map(th => th.textContent);
+      let rows = document.querySelectorAll('.product-loop tbody tr');
+
+      rows.forEach(row => {
+          let cells = row.querySelectorAll('td');
+          cells.forEach((cell, index) => {
+              cell.setAttribute('data-label', headers[index]);
+          });
+      });
+  }
 
 });
 
