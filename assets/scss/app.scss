@@ -1088,9 +1088,11 @@ img {
       border-top: 1px solid #dee2e6;
       line-height: 1.25;
       font-style: 15px;
+
       &:nth-child(2) {
         display: block;
       }
+
       &:last-child:before {
         content: none;
       }
@@ -1114,9 +1116,11 @@ img {
 .flavors-page {
   line-height: 26.5px;
   letter-spacing: 0.34px;
+
   ul {
     padding-left: 1em;
   }
+
   a {
     text-decoration: none;
     color: #000;
@@ -1129,4 +1133,61 @@ img {
   color: #0899fe;
   font-weight: 900;
 }
+
 // #Flavors Page
+
+// Sub Category
+.heading-3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 26.5px;
+  letter-spacing: 0.48px
+}
+
+.subcategory-wrap {
+  padding-bottom: 50px;
+
+  ul {
+    margin-bottom: 10px;
+  }
+
+  .click-to-more {
+    font-weight: bold;
+    color: #0899fe;
+    letter-spacing: 0.34px;
+    margin-left: 1em;
+
+    &:hover {
+      color: darken(#0899fe, 20%);
+    }
+  }
+}
+
+// #Sub Category
+
+.medium-label {
+  display: inline-block;
+  margin-left: 10px;
+  background: transparent url(../img/medium.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 72px;
+  height: 24px;
+}
+
+.mild-label {
+  display: inline-block;
+  margin-left: 10px;
+  background: transparent url(../img/mild.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px;
+  height: 24px;
+}
+
+.apx-note {
+  font-weight: 600;
+  color: #0899fe;
+  line-height: 22px;
+  letter-spacing: 0.34px;
+}
