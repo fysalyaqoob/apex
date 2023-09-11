@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    @@include('./partials/head.html')
+</head>
+
+<body>
+    <header class="site-header">
+        @@include('./partials/top-nav.html')
+        @@include('./partials/primary-nav.html')
+    </header>
+
+    <main>
+        @@include('./partials/breadcrumbs.html', { "item": "Shopping Cart" })
+        <div class="apx-cart-page">
+            <div class="container">
+                <h1 class="heading-1">Shopping Cart</h1>
+                <p>Now it's your turn to review all the items you've placed in your cart. Make sure it's exactly what
+                    you want. If you change quantities, click "Update" to see your new subtotal.</p>
+                <div class="cart-table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th width="50%">Product Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total Price</th>
+                                <th>Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>The Product Name</td>
+                                <td>
+                                    <div class="form-group mb-0">
+                                        <input type="number" class="cart-qty" name="cartQty1" id="cartQty1">
+                                    </div>
+                                </td>
+                                <td>$10</td>
+                                <td>$10</td>
+                                <td>
+                                    <div class="form-group mb-0">
+                                        <input type="checkbox" class="product-remove" name="cartRemove1"
+                                            id="cartRemove1">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>The Product Name</td>
+                                <td>
+                                    <div class="form-group mb-0">
+                                        <input type="number" class="cart-qty" name="cartQty2" id="cartQty2">
+                                    </div>
+                                </td>
+                                <td>$0.00</td>
+                                <td>$0.00</td>
+                                <td>
+                                    <div class="form-group mb-0">
+                                        <input type="checkbox" class="product-remove" name="cartRemove2"
+                                            id="cartRemove2">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td class="text-end"><strong>Sub Total</strong></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-center">$0.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="text-end"><strong>Discount</strong></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-center">$0.00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="text-end"><strong>Total</strong></td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-center">$0.00</td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="apx-shipping-info">
+                    <p><strong>Estimate Shipping:</strong></p>
+                    <p class="mb-0">Enter your destination to get a shipping estimate.</p>
+                    <p>Products shipped internationally may be subject to duties and taxes at the shipping destination
+                    </p>
+                    <div class="apx-shipping-form">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="form-group mb-3">
+                                    <label for="country" class="mb-1">Country:</label>
+                                    <select id="country" class="form-select">
+                                        <option>Select country</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="state" class="mb-1">State:*</label>
+                                    <select id="state" class="form-select">
+                                        <option>_</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-0">
+                                    <label for="zipcodeInput" class="mb-1">Zip:*</label>
+                                    <input type="number" class="form-control" id="zipcodeInput" name="zipcodeInput"
+                                        maxlength="5">
+                                    <div id="zipcodeError" class="invalid-feedback">
+                                        Please enter a valid zip code.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="apx-shipping-estimate">
+                            <div class="d-lg-flex flex-wrap justify-content-between">
+                                <div class="col-auto pe-3 mb-lg-0 mb-4">
+                                    <button type="button" class="btn btn-primary apx-arrow">Get Quote</button>
+                                </div>
+                                <div class="col-auto pe-3 mb-lg-0 mb-4">
+                                    <div class="apx-shipAmount">$7.95</div>
+                                    <div class="apx-shipType">Standard Shipping</div>
+                                </div>
+                                <div class="col-auto d-flex align-items-center">
+                                    <img src="assets/img/ship-logo.jpg" alt="shipping company" width="89" height="56">
+                                    <p class="mb-0 ps-4">Your order will arrive in 3 to 10 business days.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        @@include('./partials/footer-nav.html')
+        @@include('./partials/footer-copy.html')
+    </footer>
+
+    @@include('./partials/ShoppingCartSidebar.html')
+    @@include('./partials/floatingMessage.html')
+    @@include('./partials/pricingModal.html')
+
+    @@include('./partials/scripts.html')
+    <script src="assets/js/country-states.js"></script>
+    <script>
+
+        // JS Dynamically Country/State
+        // user country code for selected option
+        var user_country_code = "US";
+
+        (() => {
+            // Get the country name and state name from the imported script.
+            const country_array = country_and_states.country;
+            const states_array = country_and_states.states;
+
+            const id_state_option = document.getElementById("state");
+            const id_country_option = document.getElementById("country");
+
+            const createCountryNamesDropdown = () => {
+                let option = '';
+                option += '<option value="">Select Country</option>';
+
+                for (let country_code in country_array) {
+                    // set selected option user country
+                    let selected = (country_code == user_country_code) ? ' selected' : '';
+                    option += '<option value="' + country_code + '"' + selected + '>' + country_array[country_code] + '</option>';
+                }
+                id_country_option.innerHTML = option;
+            };
+
+            const createStatesNamesDropdown = () => {
+                let selected_country_code = id_country_option.value;
+                // get state names
+                let state_names = states_array[selected_country_code];
+
+                // if invalid country code
+                if (!state_names) {
+                    id_state_option.innerHTML = '<option>Select State</option>';
+                    return;
+                }
+                let option = '';
+                option += '<select id="state">';
+                option += '<option>Select State</option>';
+                for (let i = 0; i < state_names.length; i++) {
+                    option += '<option value="' + state_names[i].code + '">' + state_names[i].name + '</option>';
+                }
+                option += '</select>';
+                id_state_option.innerHTML = option;
+            };
+
+            // country select change event
+            id_country_option.addEventListener('change', createStatesNamesDropdown);
+
+            createCountryNamesDropdown();
+            createStatesNamesDropdown();
+        })();
+
+        document.getElementById('zipcodeInput').addEventListener('input', function () {
+            const zipcode = this.value;
+            const errorElement = document.getElementById('zipcodeError');
+
+            if (zipcode.length === 5 && /^[0-9]+$/.test(zipcode)) {
+                // If valid
+                this.classList.remove('is-invalid');
+                errorElement.style.display = 'none';
+            } else {
+                // If not valid
+                this.classList.add('is-invalid');
+                errorElement.style.display = 'block';
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

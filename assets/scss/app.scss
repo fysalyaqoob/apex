@@ -1191,3 +1191,113 @@ img {
   line-height: 22px;
   letter-spacing: 0.34px;
 }
+
+// Shopping Cart Page
+.apx-cart-page {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 17px;
+  line-height: 23px;
+  color: #000;
+  letter-spacing: 0.3px;
+}
+
+.cart-table {
+  padding-top: 40px;
+
+  .table> :not(caption)>*>* {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .table tr>th {
+    text-align: center;
+    border-bottom: 0;
+  }
+
+  .table tbody>tr>td {
+    background-color: #e7f2fe;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .table tr>th:first-child,
+  .table tr>td:first-child {
+    text-align: left;
+  }
+
+  .table tfoot>tr:last-child>td {
+    border-bottom: 0;
+    padding-top: 15px;
+  }
+
+  .table tfoot>tr {
+    font-weight: bold;
+  }
+
+  .cart-qty {
+    max-width: 42px;
+    height: 24px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #858585;
+    background-color: #fff;
+    font-size: 14px;
+  }
+}
+
+.apx-shipping-info {
+  font-size: 15px;
+  line-height: 23px;
+}
+
+
+.apx-arrow {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 0.3px;
+  border-radius: 0;
+  padding: 0 16px 0 26px;
+  margin-left: 16px;
+  height: 34px;
+  text-align: center;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  &::before {
+    position: absolute;
+    left: -16px;
+    top: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    content: '';
+    border: 1.5px solid #fff;
+    background-image: url("data:image/svg+xml,%3Csvg width='32px' height='32px' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48.83 48.83'%3E%3Ccircle cx='24.42' cy='24.42' r='24.42' transform='translate(-9.04 32.94) rotate(-59.3)' style='fill:%232f3382;'%3E%3C/circle%3E%3Cpolygon points='35.55 24.42 27.46 31.31 19.38 38.2 19.38 30.76 26.82 24.42 19.38 18.06 19.38 10.63 27.46 17.52 35.55 24.42' style='fill:%23FFFFFF;'%3E%3C/polygon%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+  }
+}
+
+.apx-shipping-estimate {
+  border-top: 1px solid rgba(0,0,0, 0.3);
+  padding-top: 24px;
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.apx-shipAmount {
+  font-weight: bold;
+}
+
+@include media-breakpoint-down(sm) {
+  .cart-table { 
+    font-size: 13px;
+    line-height: 1.25;
+    letter-spacing: 0;
+  }
+}
+
+// #Shopping Cart Page

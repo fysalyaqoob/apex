@@ -183,3 +183,4 @@ function parallaxScrollEffectWithSpeed() {
 
 // Execute the parallax effect function once the document is fully loaded
 document.addEventListener('DOMContentLoaded', parallaxScrollEffectWithSpeed);
+
