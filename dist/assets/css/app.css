@@ -13130,3 +13130,70 @@ img {
 .apx-inner-table .table tbody > tr > td {
   background-color: #fff;
 }
+
+.generic-page {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.apx-form {
+  font-size: 15px;
+  line-height: 22px;
+  color: #000;
+}
+.apx-form label {
+  margin-bottom: 10px;
+  font-weight: 600;
+  display: inline-block;
+}
+.apx-form .form-control {
+  background-color: #efeff0;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  border-radius: 0;
+  height: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 0 10px;
+  max-width: 400px;
+}
+.apx-form textarea.form-control {
+  height: 136px;
+}
+.apx-form .req {
+  color: red;
+  vertical-align: super;
+}
+
+.generic-contact-block {
+  border: 1px solid #2f3382;
+  padding: 15px;
+}
+.generic-contact-block h3, .generic-contact-block .h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #2f3382;
+  padding-left: 35px;
+}
+.generic-contact-block .pl-35 {
+  padding-left: 35px;
+}
+.generic-contact-block .has-icon {
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 25px auto;
+  padding-left: 35px;
+  min-height: 25px;
+}
+.generic-contact-block .--phone {
+  background-image: url(../img/phone.svg);
+}
+.generic-contact-block .--map {
+  background-image: url(../img/map-pin.svg);
+}
+.generic-contact-block a {
+  color: inherit;
+  text-decoration: none;
+}

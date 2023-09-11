@@ -1325,3 +1325,78 @@ img {
 .apx-inner-table .table tbody>tr>td {
   background-color: #fff;
 }
+
+// Generic Page
+.generic-page {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.apx-form {
+  font-size: 15px;
+  line-height: 22px;
+  color: #000;
+  label {
+    margin-bottom: 10px;
+    font-weight: 600;
+    display: inline-block;
+
+  }
+  .form-control {
+    background-color: #efeff0;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    border-radius: 0;
+    height: 24px;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0 10px;
+    max-width: 400px;
+  }
+  textarea.form-control {
+    height: 136px;
+  }
+  .req {
+    color: red;
+    vertical-align: super;
+  }
+}
+
+.generic-contact-block {
+  border: 1px solid $primary;
+  padding: 15px;
+  h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: $primary;
+    padding-left: 35px;
+  }
+
+  .pl-35 {
+    padding-left: 35px;
+  }
+
+  .has-icon {
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 25px auto;
+    padding-left: 35px;
+    min-height: 25px;
+  }
+
+  .--phone {
+    background-image: url(../img/phone.svg);
+  }
+
+  .--map {
+    background-image: url(../img/map-pin.svg);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+}
