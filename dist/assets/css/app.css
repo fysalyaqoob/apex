@@ -12983,6 +12983,7 @@ img {
 
 .medium-label {
   display: inline-block;
+  vertical-align: sub;
   margin-left: 10px;
   background: transparent url(../img/medium.svg);
   background-repeat: no-repeat;
@@ -12993,6 +12994,7 @@ img {
 
 .mild-label {
   display: inline-block;
+  vertical-align: sub;
   margin-left: 10px;
   background: transparent url(../img/mild.svg);
   background-repeat: no-repeat;
@@ -13196,4 +13198,8 @@ img {
 .generic-contact-block a {
   color: inherit;
   text-decoration: none;
+}
+
+.generic-page li {
+  position: relative;
 }

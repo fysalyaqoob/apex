@@ -1167,6 +1167,7 @@ img {
 
 .medium-label {
   display: inline-block;
+  vertical-align: sub;
   margin-left: 10px;
   background: transparent url(../img/medium.svg);
   background-repeat: no-repeat;
@@ -1177,6 +1178,7 @@ img {
 
 .mild-label {
   display: inline-block;
+  vertical-align: sub;
   margin-left: 10px;
   background: transparent url(../img/mild.svg);
   background-repeat: no-repeat;
@@ -1398,5 +1400,11 @@ img {
     color: inherit;
     text-decoration: none;
   }
+}
 
+// Generic Page
+.generic-page {
+  li {
+    position: relative;
+  }
 }
