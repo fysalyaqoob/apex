@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    @@include('./partials/head.html')
+</head>
+
+<body>
+    <header class="site-header">
+        @@include('./partials/top-nav.html')
+        @@include('./partials/primary-nav.html')
+    </header>
+
+    <main>
+        @@include('./partials/breadcrumbs.html', { "item": "View Orders" })
+        <div class="apx-order-page">
+            <div class="container">
+                <h1 class="heading-1">Your Orders</h1>
+                <ul class="nav f17">
+                    <li><a class="p-4 ps-0" href="#">View Orders</a></li>
+                    <li><a class="p-4" href="#">Change Login Information</a></li>
+                </ul>
+                <div class="apx-inner-table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Order Date</th>
+                                <th>Order Number <br />Status</th>
+                                <th>Recipient</th>
+                                <th>Shipping <br />Tracking #</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>09/11/2023</td>
+                                <td>001</td>
+                                <td>Name</td>
+                                <td>#0000</td>
+                                <td>$0.00</td>
+                            </tr>
+                            <tr>
+                                <td>09/11/2023</td>
+                                <td>001</td>
+                                <td>Name</td>
+                                <td>#0000</td>
+                                <td>$0.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        @@include('./partials/footer-nav.html')
+        @@include('./partials/footer-copy.html')
+    </footer>
+
+    @@include('./partials/ShoppingCartSidebar.html')
+    @@include('./partials/floatingMessage.html')
+    @@include('./partials/pricingModal.html')
+
+    @@include('./partials/scripts.html')
+</body>
+
+</html>

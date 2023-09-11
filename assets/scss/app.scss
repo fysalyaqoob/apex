@@ -1202,7 +1202,7 @@ img {
   letter-spacing: 0.3px;
 }
 
-.cart-table {
+.cart-table, .apx-inner-table {
   padding-top: 40px;
 
   .table> :not(caption)>*>* {
@@ -1300,4 +1300,28 @@ img {
   }
 }
 
-// #Shopping Cart Page
+// Account Page
+.apx-order-page {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.f17 {
+  font-size: 17px;
+  line-height: 32px;
+}
+
+.apx-inner-table .table tr>th {
+  border-bottom: 1px solid rgba(#000, 0.3);
+}
+
+.apx-inner-table .table tbody>tr>td,
+.apx-inner-table .table thead>tr>th {
+  color: $primary;
+  text-align: left;
+  vertical-align: top;
+}
+
+.apx-inner-table .table tbody>tr>td {
+  background-color: #fff;
+}
