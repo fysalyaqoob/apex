@@ -49,8 +49,47 @@ gulp.task('beautify-html', () => {
     .pipe(gulp.dest('dist/'))
 });
 
+function generateHtmlSitemap(files) {
+  const domain = 'https://apex-flavors.netlify.app'; // Replace with your domain
+
+  let links = files.map(file => {
+    let relativePath = path.relative('./dist/', file.path);
+    return `<li><a href="${domain}/${relativePath}">${relativePath}</a></li>`;
+  });
+
+  return `
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sitemap</title>
+    </head>
+    <body>
+      <ul>
+        ${links.join('\n')}
+      </ul>
+    </body>
+    </html>
+  `;
+}
+
+gulp.task('generate-html-sitemap', (done) => {
+  let allHtmlFiles = [];
+
+  gulp.src('dist/*.html')
+    .on('data', (file) => {
+      allHtmlFiles.push(file);
+    })
+    .on('end', () => {
+      let sitemapContent = generateHtmlSitemap(allHtmlFiles);
+      require('fs').writeFileSync('dist/sitemap.html', sitemapContent);
+      done();
+    });
+});
+
 // Update Main build task
-gulp.task("build", gulp.series("clean", gulp.parallel('scss'), 'html:partials', 'copyAssets', 'beautify-html'));
+gulp.task("build", gulp.series("clean", gulp.parallel('scss'), 'html:partials', 'copyAssets', 'beautify-html', 'generate-html-sitemap'));
 
 gulp.task('dev', function watchChanges(done) {
   browserSync.init({ server: { baseDir: "./dist" } });
