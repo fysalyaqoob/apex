@@ -1204,7 +1204,8 @@ img {
   letter-spacing: 0.3px;
 }
 
-.cart-table, .apx-inner-table {
+.cart-table,
+.apx-inner-table {
   padding-top: 40px;
 
   .table> :not(caption)>*>* {
@@ -1283,7 +1284,7 @@ img {
 }
 
 .apx-shipping-estimate {
-  border-top: 1px solid rgba(0,0,0, 0.3);
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
   padding-top: 24px;
   margin-top: 24px;
   font-size: 16px;
@@ -1295,7 +1296,7 @@ img {
 }
 
 @include media-breakpoint-down(sm) {
-  .cart-table { 
+  .cart-table {
     font-size: 13px;
     line-height: 1.25;
     letter-spacing: 0;
@@ -1338,12 +1339,14 @@ img {
   font-size: 15px;
   line-height: 22px;
   color: #000;
+
   label {
     margin-bottom: 10px;
     font-weight: 600;
     display: inline-block;
 
   }
+
   .form-control {
     background-color: #efeff0;
     border: 0;
@@ -1356,9 +1359,11 @@ img {
     padding: 0 10px;
     max-width: 400px;
   }
+
   textarea.form-control {
     height: 136px;
   }
+
   .req {
     color: red;
     vertical-align: super;
@@ -1368,6 +1373,7 @@ img {
 .generic-contact-block {
   border: 1px solid $primary;
   padding: 15px;
+
   h3 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -1407,4 +1413,110 @@ img {
   li {
     position: relative;
   }
+}
+
+//Checkout Page
+.apx-checkout {
+  letter-spacing: normal;
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 0.46px;
+  }
+
+  .progress,
+  .progress-bar {
+    height: 8px;
+  }
+
+  .progress-bar {
+    background: transparent url(../img/bar.jpg) repeat-x;
+  }
+
+  .required {
+    color: red;
+    vertical-align: super;
+  }
+
+  .form-label {
+    font-size: 15px;
+    letter-spacing: 0.3px;
+  }
+
+  .form-control {
+    background-color: #efeff0;
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    height: 24.5px;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+  }
+
+  .form-select {
+    background-color: #efeff0;
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+  }
+
+  textarea.form-control {
+    height: 170px;
+  }
+
+}
+
+.orderDetails {
+  --bs-border-color: #828282;
+  font-size: 12px;
+  line-height: 19.3px;
+  letter-spacing: 0.24px;
+  background-color: rgba(#2f3382, 0.15);
+  padding: 27px 15px 22px 15px;
+
+  h2 {
+    font-size: 23px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding: 0 15px;
+  }
+
+  .orderDetails-fields {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .tableHead {
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: normal;
+    margin-bottom: 20px;
+  }
+
+  .tableBody {
+    font-size: 15px;
+    font-weight: normal;
+  }
+
+  .tableFoot {
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  .table> :not(caption)>*>* {
+    border: 0;
+  }
+
+  .px-30 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
 }

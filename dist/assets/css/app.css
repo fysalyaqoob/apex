@@ -13019,35 +13019,43 @@ img {
   letter-spacing: 0.3px;
 }
 
-.cart-table, .apx-inner-table {
+.cart-table,
+.apx-inner-table {
   padding-top: 40px;
 }
-.cart-table .table > :not(caption) > * > *, .apx-inner-table .table > :not(caption) > * > * {
+.cart-table .table > :not(caption) > * > *,
+.apx-inner-table .table > :not(caption) > * > * {
   border-color: rgba(0, 0, 0, 0.3);
 }
-.cart-table .table tr > th, .apx-inner-table .table tr > th {
+.cart-table .table tr > th,
+.apx-inner-table .table tr > th {
   text-align: center;
   border-bottom: 0;
 }
-.cart-table .table tbody > tr > td, .apx-inner-table .table tbody > tr > td {
+.cart-table .table tbody > tr > td,
+.apx-inner-table .table tbody > tr > td {
   background-color: #e7f2fe;
   vertical-align: middle;
   text-align: center;
   font-size: 15px;
 }
 .cart-table .table tr > th:first-child,
-.cart-table .table tr > td:first-child, .apx-inner-table .table tr > th:first-child,
+.cart-table .table tr > td:first-child,
+.apx-inner-table .table tr > th:first-child,
 .apx-inner-table .table tr > td:first-child {
   text-align: left;
 }
-.cart-table .table tfoot > tr:last-child > td, .apx-inner-table .table tfoot > tr:last-child > td {
+.cart-table .table tfoot > tr:last-child > td,
+.apx-inner-table .table tfoot > tr:last-child > td {
   border-bottom: 0;
   padding-top: 15px;
 }
-.cart-table .table tfoot > tr, .apx-inner-table .table tfoot > tr {
+.cart-table .table tfoot > tr,
+.apx-inner-table .table tfoot > tr {
   font-weight: bold;
 }
-.cart-table .cart-qty, .apx-inner-table .cart-qty {
+.cart-table .cart-qty,
+.apx-inner-table .cart-qty {
   max-width: 42px;
   height: 24px;
   margin: 0 auto;
@@ -13202,4 +13210,92 @@ img {
 
 .generic-page li {
   position: relative;
+}
+
+.apx-checkout {
+  letter-spacing: normal;
+}
+.apx-checkout h2, .apx-checkout .h2 {
+  text-transform: uppercase;
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 0.46px;
+}
+.apx-checkout .progress,
+.apx-checkout .progress-bar {
+  height: 8px;
+}
+.apx-checkout .progress-bar {
+  background: transparent url(../img/bar.jpg) repeat-x;
+}
+.apx-checkout .required {
+  color: red;
+  vertical-align: super;
+}
+.apx-checkout .form-label {
+  font-size: 15px;
+  letter-spacing: 0.3px;
+}
+.apx-checkout .form-control {
+  background-color: #efeff0;
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  height: 24.5px;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
+.apx-checkout .form-select {
+  background-color: #efeff0;
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
+.apx-checkout textarea.form-control {
+  height: 170px;
+}
+
+.orderDetails {
+  --bs-border-color: #828282;
+  font-size: 12px;
+  line-height: 19.3px;
+  letter-spacing: 0.24px;
+  background-color: rgba(47, 51, 130, 0.15);
+  padding: 27px 15px 22px 15px;
+}
+.orderDetails h2, .orderDetails .h2 {
+  font-size: 23px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  padding: 0 15px;
+}
+.orderDetails .orderDetails-fields {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.orderDetails .tableHead {
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: normal;
+  margin-bottom: 20px;
+}
+.orderDetails .tableBody {
+  font-size: 15px;
+  font-weight: normal;
+}
+.orderDetails .tableFoot {
+  font-size: 17px;
+  font-weight: bold;
+}
+.orderDetails .table > :not(caption) > * > * {
+  border: 0;
+}
+.orderDetails .px-30 {
+  padding-left: 30px;
+  padding-right: 30px;
 }

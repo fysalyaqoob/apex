@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    @@include('./partials/head.html')
+</head>
+
+<body>
+    <header class="site-header">
+        @@include('./partials/top-nav.html')
+        @@include('./partials/primary-nav.html')
+    </header>
+
+    <main>
+        @@include('./partials/breadcrumbs.html', { "item": "Checkout" })
+        <div class="generic-page apx-checkout">
+            <div class="container">
+                <h1 class="heading-1">Checkout</h1>
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="mb-3 d-flex flex-column">
+                            <p class="mb-0">Returning customer? <a href="#">Click here to login</a></p>
+                            <p class="mb-0">Have a coupon? <a href="#">Click here to enter your code</a></p>
+                        </div>
+
+                        <div class="mb-4">
+                            <p class="fw-bold mb-2">Add <span class="text-primary">$1141.00</span> to the cart and get
+                                FREE SHIPPING!</p>
+                            <div class="progress" role="progressbar" aria-label="Free Shipping Progress Bar"
+                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 25%"></div>
+                            </div>
+                        </div>
+
+                        <h2 class="mb-4">Billing Details</h2>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name<span
+                                        class="required">*</span></label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name<span
+                                        class="required">*</span></label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+
+
+                        <div class="mb-3">
+                            <label for="company" class="form-label">Company Name (optional)</label>
+                            <input type="text" class="form-control" id="company">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="country" class="form-label">Country/Region<span
+                                    class="required">*</span></label>
+                            <select class="form-select" id="country" required>
+                                <option selected>United States (US)</option>
+                                <!-- Add other countries here -->
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Street address<span
+                                    class="required">*</span></label>
+                            <input type="text" class="form-control" id="address"
+                                placeholder="House number and street name" required>
+                            <input type="text" class="form-control mt-2"
+                                placeholder="Apartment, suite, unit etc. (optional)">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="townCity" class="form-label">Town/City<span class="required">*</span></label>
+                            <input type="text" class="form-control" id="townCity" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="state" class="form-label">State<span class="required">*</span></label>
+                            <select class="form-select" id="state" required>
+                                <option selected>Alabama</option>
+                                <!-- Add other states here -->
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="zipCode" class="form-label">Zip Code<span class="required">*</span></label>
+                            <input type="text" class="form-control" id="zipCode" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone<span class="required">*</span></label>
+                            <input type="text" class="form-control" id="phone" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address<span class="required">*</span></label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+
+                        <!-- Create an account section -->
+                        <div class="pt-5 mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="createAccount"
+                                onclick="toggleElement('accountDetails')" checked>
+                            <label class="form-check-label" for="createAccount" checked>Create an account?</label>
+                        </div>
+
+                        <div id="accountDetails" style="display:block;">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Account username<span
+                                        class="required">*</span></label>
+                                <input type="text" class="form-control" id="username">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Create account password<span
+                                        class="required">*</span></label>
+                                <input type="password" class="form-control" id="password">
+                            </div>
+                        </div>
+
+                        <!-- Ship to a different address section -->
+                        <div class="pt-5 mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" checked id="differentAddress"
+                                onclick="toggleElement('shippingDetails')">
+                            <label class="form-check-label" for="differentAddress">Ship to a different address?</label>
+                        </div>
+
+                        <div id="shippingDetails" style="display:block;">
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name<span
+                                            class="required">*</span></label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name<span
+                                            class="required">*</span></label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label for="company" class="form-label">Company Name (optional)</label>
+                                <input type="text" class="form-control" id="company">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="country" class="form-label">Country/Region<span
+                                        class="required">*</span></label>
+                                <select class="form-select" id="country" required>
+                                    <option selected>United States (US)</option>
+                                    <!-- Add other countries here -->
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Street address<span
+                                        class="required">*</span></label>
+                                <input type="text" class="form-control" id="address"
+                                    placeholder="House number and street name" required>
+                                <input type="text" class="form-control mt-2"
+                                    placeholder="Apartment, suite, unit etc. (optional)">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="townCity" class="form-label">Town/City<span
+                                        class="required">*</span></label>
+                                <input type="text" class="form-control" id="townCity" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="state" class="form-label">State<span class="required">*</span></label>
+                                <select class="form-select" id="state" required>
+                                    <option selected>Alabama</option>
+                                    <!-- Add other states here -->
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="zipCode" class="form-label">Zip Code<span class="required">*</span></label>
+                                <input type="text" class="form-control" id="zipCode" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="orderNotes" class="form-label">Order notes (optional)</label>
+                            <textarea class="form-control" id="orderNotes" rows="3"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="col-md-5">
+                        <div class="orderDetails">
+                            <h2>Your Order</h2>
+                            <div class="orderDetails-fields">
+
+                                <div class="d-flex flex-wrap justify-content-between tableHead">
+                                    <div class="col"><strong>Product</strong></div>
+                                    <div class="col text-end"><strong>Subtotal</strong></div>
+                                </div>
+
+                                <div class="tableBody align-items-center border-bottom pb-2 mb-2">
+                                    <table class="table">
+                                        <tr>
+                                            <td>
+                                                <span class="productName">Pure Bergamot Extract, Natural - 2 fl. oz.
+                                                    glass bottle</span>
+                                            </td>
+                                            <td><span class="productAmount">$00.00</span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                                <div class="d-flex flex-wrap justify-content-between fw-bolder border-bottom pb-2 mb-2">
+                                    <div class="col">Subtotal</div>
+                                    <div class="col text-end text-primary">$00.00</div>
+                                </div>
+
+                                <div class="d-flex flex-wrap justify-content-between fw-bolder border-bottom pb-2 mb-2">
+                                    <div class="col">Shipping</div>
+                                    <div class="col text-end">
+                                        <div>Flat rate <span class="text-primary">$00.000</span></div>
+                                        <div>Local Pickup <span class="text-primary">$00.000</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap justify-content-between tableFoot text-primary">
+                                    <div class="col">Total</div>
+                                    <div class="col text-end text-primary">$000.00</div>
+                                </div>
+
+                            </div>
+
+                            <div class="orderDetails-fields px-30">
+                                <p><strong>Direct Bank Transfer</strong></p>
+                                <p>Make your payment directly into our bank account. Please use your Order ID as the
+                                    payment reference. Your order won’t be shipped until the funds have cleared in our
+                                    account.</p>
+
+                                <p><strong>Cheque Payment</strong></p>
+
+                                <p><strong>Cash on delivery</strong></p>
+
+                                <div class="d-inline-flex align-items-center">
+                                    <strong>Paypal</strong>
+                                    <img class="ms-2" src="assets/img/payment.jpg" alt="paypal" width="110"
+                                        height="33" />
+                                </div>
+                            </div>
+
+                            <div class="px-30">
+                                <p>Your personal data will be used to process your order, support your experience
+                                    throughout this website, and for other purposes described in our <a href="#">privacy
+                                        policy</a>.</p>
+
+                                <div class="pt-1 mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input">
+                                    <label class="form-check-label fw-bold" for="acceptTerms">I have read and agree to
+                                        the website terms and conditions.</label>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary apx-arrow d-block w-100">Place Order</button>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        @@include('./partials/footer-nav.html')
+        @@include('./partials/footer-copy.html')
+    </footer>
+
+    @@include('./partials/ShoppingCartSidebar.html')
+    @@include('./partials/floatingMessage.html')
+    @@include('./partials/pricingModal.html')
+
+    @@include('./partials/scripts.html')
+
+    <script>
+        function toggleElement(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === 'none' || element.style.display === '') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
