@@ -13032,9 +13032,12 @@ img {
   text-align: center;
   border-bottom: 0;
 }
+.cart-table .table tbody > tr:nth-child(odd) > td,
+.apx-inner-table .table tbody > tr:nth-child(odd) > td {
+  background-color: #e7f2fe;
+}
 .cart-table .table tbody > tr > td,
 .apx-inner-table .table tbody > tr > td {
-  background-color: #e7f2fe;
   vertical-align: middle;
   text-align: center;
   font-size: 15px;

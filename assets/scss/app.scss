@@ -1217,8 +1217,11 @@ img {
     border-bottom: 0;
   }
 
-  .table tbody>tr>td {
+  .table tbody>tr:nth-child(odd)>td {
     background-color: #e7f2fe;
+  }
+
+  .table tbody>tr>td {
     vertical-align: middle;
     text-align: center;
     font-size: 15px;
