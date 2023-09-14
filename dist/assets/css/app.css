@@ -12030,6 +12030,8 @@ body {
   font-stretch: normal;
   font-style: normal;
   letter-spacing: 0.34px;
+  position: relative;
+  z-index: 11;
 }
 @media (min-width: 992px) {
   #primary-nav .nav-link {

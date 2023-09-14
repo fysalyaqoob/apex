@@ -1,19 +1,24 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-
+  
   const toastTrigger = document.getElementById('liveToastBtn');
   const toastLiveExample = document.getElementById('liveToast');
+  const toast = new bootstrap.Toast(toastLiveExample);
+
+  // Function to show the toast
+  function showToast() {
+    if (!toastLiveExample.classList.contains('show')) {
+      toast.show();
+    }
+  }
+
+  // Show the toast on first visit
+  if (!localStorage.getItem('toastShown')) {
+    showToast();
+    localStorage.setItem('toastShown', 'true');
+  }
 
   if (toastTrigger) {
-    toastTrigger.addEventListener('click', () => {
-      const toast = new bootstrap.Toast(toastLiveExample);
-
-      // Check if 'show' class is not present
-      if (!toastLiveExample.classList.contains('show')) {
-        // If 'show' class is not present, show the toast
-        toast.show();
-      }
-      // If 'show' class is already present, do nothing
-    });
+    toastTrigger.addEventListener('click', showToast);
   }
 
   // Get the cartTrigger element
