@@ -18,7 +18,7 @@ $navbar-nav-link-padding-y: 1rem;
 $navbar-nav-link-padding-x: 1rem;
 
 $container-max-widths: (
-  lg: 960px
+  lg: 984px
 );
 
 $dropdown-bg: #1f9ded;
@@ -33,3 +33,4 @@ $carousel-transition-duration: .41s;
 
 $breadcrumb-divider: quote(">");
 $breadcrumb-active-color: #000;
+$breadcrumb-item-padding-x: 0.25rem;

@@ -1,0 +1,87 @@
+<!doctype html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    @@include('./partials/head.html')
+</head>
+
+<body>
+    <header class="site-header">
+        @@include('./partials/top-nav.html')
+        @@include('./partials/primary-nav.html')
+    </header>
+
+    <main>
+        <nav class="breads" aria-label="breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Alcoholic Beverage Flavors</a></li>
+                    <li class="breadcrumb-item"><a href="#">All TTP Approved Flavors for Alcoholic Beverages
+                            (Alphabetical)</a></li>
+                    <li class="breadcrumb-item"><a href="#">All TTB Approved Flavors for Beer, Cider, Hard Seltzer,
+                            Wine, and Spirits</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Whoopie Pie Type, Natural & Artificial
+                        (Contains < 0.10% Artificial Top Note)</li>
+                </ol>
+            </div>
+        </nav>
+        <div class="product-page page-py">
+            <div class="container">
+                <h1 class="heading-1">Whoopie Pie Type, Natural & Artificial (Contains < 0.10% Artificial Top Note)</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <div class="out-of-stock-btn my-4">TEMPORARILY OUT OF STOCK</div>
+
+                <div class="apx-checkout">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>If you would like to be notified when the product becomes available, enter the
+                                information below:</p>
+                            <div class="mb-3">
+                                <label class="form-label">First Name:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Last Name:</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">EmailAddress:</label>
+                                <input type="email" class="form-control">
+                            </div> 
+                            
+                            <input type="button" class="mt-4 btn btn-primary btn-input apx-arrow2" value="Yes please notify me">
+                        </div>
+                        <div class="col-md-6 ps-md-3 mt-md-0 mt-4">
+                            <p>Whoopie Pie Type, Natural & Artificial (Contains < 0.10% Artificial Top Note) contains propylene glycol, ethyl alcohol, water and natural and artificial flavor.</p>
+                            <ul>
+                                <li>Our flavors are used by hundreds of breweries, distilleries 
+                                and wineries in North America.</li>
+                                <li>For beer, cider, wine, hard seltzer and spirits</li>
+                                <li>TTB Approved</li>
+                                <li>Kosher Certified</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        @@include('./partials/footer-nav.html')
+        @@include('./partials/footer-copy.html')
+    </footer>
+
+    @@include('./partials/ShoppingCartSidebar.html')
+    @@include('./partials/floatingMessage.html')
+    @@include('./partials/pricingModal.html')
+
+    @@include('./partials/scripts.html')
+</body>
+
+</html>
