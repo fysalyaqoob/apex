@@ -739,7 +739,7 @@ progress {
 
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container, .apx-carousel .carousel-arrows {
-    max-width: 984px;
+    max-width: 1170px;
   }
 }
 :root {
@@ -13175,6 +13175,16 @@ img {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+.generic-page .form-control {
+  background-color: #efeff0;
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  height: 24.5px;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
 
 .apx-form {
   font-size: 15px;
@@ -13378,4 +13388,29 @@ img {
   display: block;
   max-width: 391px;
   margin: 0 auto;
+}
+
+.search-wrapper {
+  font-size: 15px;
+}
+.search-wrapper .row-striped:nth-of-type(even) {
+  background-color: ghostwhite;
+  margin-top: 10px;
+}
+
+.searchBody .row {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+@media (max-width: 767.98px) {
+  .searchBody .row > * {
+    margin-bottom: 10px;
+  }
+}
+
+.searchHead {
+  font-weight: bold;
+}
+.searchHead > * {
+  margin-bottom: 15px;
 }

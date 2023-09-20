@@ -1,0 +1,115 @@
+<!doctype html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    @@include('./partials/head.html')
+</head>
+
+<body>
+    <header class="site-header">
+        @@include('./partials/top-nav.html')
+        @@include('./partials/primary-nav.html')
+    </header>
+
+    <main>
+        <nav class="breads" aria-label="breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Search Results</li>
+                </ol>
+            </div>
+        </nav>
+        <div class="generic-page">
+            <div class="container">
+                <h1 class="heading-1">Search Results</h1>
+                <div class="row align-items-center justify-content-between mb-4">
+                    <div class="col-md-auto">
+                        <div class="search-top d-md-flex mb-md-0 mb-4 justify-content-between">
+                            <div class="search-text">Search Results</div>
+                            <input class="form-control d-inline-block w-auto ms-md-2" type="text" value="032">
+                            <a class="search-btn ms-3" href="#">Search Again!</a>
+                            <div class="form-check mt-3">
+                                <label>Expand Search</label>
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-auto">
+                        <a href="#" class="btn btn-primary btn-input apx-arrow2">Request Custom Flavor</a>
+                    </div>
+                </div>
+                <div class="search-wrapper">
+                    <div class="row searchHead d-md-flex d-none">
+                        <div class="col-md-2" date-head="Item Number">Item Number</div>
+                        <div class="col-md-3" date-head="Product Name">Product Name</div>
+                        <div class="col-md-5" date-head="Description">Description</div>
+                        <div class="col-md-2" date-head="Category">Category</div>
+                    </div>
+                    <div class="searchBody">
+                        <div class="row row-striped">
+                            <div class="col-md-2">032TTB</div>
+                            <div class="col-md-3"><a href="#">Strawberry Type, Natural and Artificial (Contains < 0.10%
+                                        Artificial Top Note)</a>
+                            </div>
+                            <div class="col-md-5">Our Strawberry Type, Natural & Artificial (Contains < 0.10% Artificial
+                                    Top Note) was developed for use in beer, cider, wine and spirits. We recommend a
+                                    starting use level of 0.10% to 0.30% in most alcoholic beverages. Clear and almost
+                                    colorless it will not discolor spirits. We recommend a starting use level of 0.10%
+                                    to 0.30% in most alcoholic beverages. This extract is TTB approved and does not
+                                    require an artificial flavor label declaration when used in beer, wine and
+                                    spirits.</div>
+                                    <div class="col-md-2"><a href="#">Alcoholic Beverage Flavors</a></div>
+                            </div>
+                            <div class="row row-striped">
+                                <div class="col-md-2">032TTB</div>
+                                <div class="col-md-3"><a href="#">Strawberry Type, Natural and Artificial (Contains <
+                                            0.10% Artificial Top Note)</a>
+                                </div>
+                                <div class="col-md-5">Our Strawberry Type, Natural & Artificial (Contains < 0.10%
+                                        Artificial Top Note) was developed for use in beer, cider, wine and spirits. We
+                                        recommend a starting use level of 0.10% to 0.30% in most alcoholic beverages.
+                                        Clear and almost colorless it will not discolor spirits. We recommend a starting
+                                        use level of 0.10% to 0.30% in most alcoholic beverages. This extract is TTB
+                                        approved and does not require an artificial flavor label declaration when used
+                                        in beer, wine and spirits.</div>
+                                        <div class="col-md-2"><a href="#">Alcoholic Beverage Flavors</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </main>
+
+    <footer class="site-footer">
+        @@include('./partials/footer-nav.html')
+        @@include('./partials/footer-copy.html')
+    </footer>
+
+    @@include('./partials/ShoppingCartSidebar.html')
+    @@include('./partials/floatingMessage.html')
+    @@include('./partials/pricingModal.html')
+
+    @@include('./partials/scripts.html')
+    <script>
+        // When the DOM is ready
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if screen width is small (indicating mobile)
+
+            const headers = Array.from(document.querySelectorAll('.searchHead > div'));
+
+            // Loop through each row in searchBody
+            document.querySelectorAll('.searchBody .row').forEach(row => {
+                const columns = Array.from(row.children);
+
+                columns.forEach((col, index) => {
+                    // Prepend the respective header's text content wrapped in a <strong> tag followed by a colon to the column's content
+                    col.innerHTML = '<strong class="d-md-none">' + headers[index].textContent + ':</strong> ' + col.innerHTML;
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

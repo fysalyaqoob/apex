@@ -1363,6 +1363,18 @@ img {
 .generic-page {
   padding-top: 40px;
   padding-bottom: 40px;
+
+  .form-control {
+    background-color: #efeff0;
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    height: 24.5px;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+  }
+
 }
 
 .apx-form {
@@ -1561,11 +1573,11 @@ img {
     padding-right: 30px;
   }
 
-  .table tr > :first-child {
+  .table tr> :first-child {
     padding-left: 0;
   }
 
-  .table tr > :last-child {
+  .table tr> :last-child {
     padding-right: 0;
   }
 }
@@ -1606,4 +1618,34 @@ img {
   display: block;
   max-width: 391px;
   margin: 0 auto;
+}
+
+//Search
+.search-wrapper {
+  font-size: 15px;
+
+  .row-striped:nth-of-type(even) {
+    background-color: ghostwhite;
+    margin-top: 10px;
+  }
+}
+
+.searchBody {
+  .row {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    > * {
+      @include media-breakpoint-down(md) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.searchHead {
+  font-weight: bold;
+
+  > * {
+    margin-bottom: 15px;
+  }
 }
