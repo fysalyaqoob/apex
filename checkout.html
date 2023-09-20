@@ -16,46 +16,32 @@
         <div class="generic-page apx-checkout">
             <div class="container">
                 <h1 class="heading-1">Checkout</h1>
+                <div class="checkout-table table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>(664TTB) Wild Acai Berry Type, Natural Flavor Blend (2 fl. oz. glass bottle)</td>
+                                <td>1</td>
+                                <td>$14.12</td>
+                                <td>$14.12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="row">
                     <div class="col-md-7">
-                        <div class="mb-3 d-flex flex-column">
-                            <p class="mb-0">Returning customer? <a href="#">Click here to login</a></p>
-                            <p class="mb-0">Have a coupon? <a href="#">Click here to enter your code</a></p>
-                        </div>
+                        <h2 class="mb-4 text-primary">BILLing information</h2>
 
-                        <div class="mb-4">
-                            <p class="fw-bold mb-2">Add <span class="text-primary">$1141.00</span> to the cart and get
-                                FREE SHIPPING!</p>
-                            <div class="progress" role="progressbar" aria-label="Free Shipping Progress Bar"
-                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar" style="width: 25%"></div>
-                            </div>
-                        </div>
-
-                        <h2 class="mb-4">Billing Details</h2>
-
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <label for="firstName" class="form-label">First Name<span
-                                        class="required">*</span></label>
-                                <input type="text" class="form-control" id="firstName" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="lastName" class="form-label">Last Name<span
-                                        class="required">*</span></label>
-                                <input type="text" class="form-control" id="lastName" required>
-                            </div>
-                        </div>
-
-
-                        <div class="mb-3">
-                            <label for="company" class="form-label">Company Name (optional)</label>
-                            <input type="text" class="form-control" id="company">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="country" class="form-label">Country/Region<span
-                                    class="required">*</span></label>
+                        <div class="mb-3 col-6">
+                            <label for="country" class="form-label">Country/Region<span class="required">*</span></label>
                             <select class="form-select" id="country" required>
                                 <option selected>United States (US)</option>
                                 <!-- Add other countries here -->
@@ -63,208 +49,260 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="address" class="form-label">Street address<span
-                                    class="required">*</span></label>
-                            <input type="text" class="form-control" id="address"
-                                placeholder="House number and street name" required>
-                            <input type="text" class="form-control mt-2"
-                                placeholder="Apartment, suite, unit etc. (optional)">
+                            <label for="address" class="form-label">First Name:<span class="required">*</span></label>
+                            <input type="text" class="form-control mt-2">
                         </div>
 
                         <div class="mb-3">
-                            <label for="townCity" class="form-label">Town/City<span class="required">*</span></label>
+                            <label for="address" class="form-label">Last Name:<span class="required">*</span></label>
+                            <input type="text" class="form-control mt-2">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Street address 1:<span class="required">*</span></label>
+                            <input type="text" class="form-control mt-2">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Street address 2:</label>
+                            <input type="text" class="form-control mt-2">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="company" class="form-label">Company Name or C/O:</label>
+                            <input type="text" class="form-control" id="company">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="townCity" class="form-label">City:<span class="required">*</span></label>
                             <input type="text" class="form-control" id="townCity" required>
                         </div>
 
-                        <div class="mb-3">
-                            <label for="state" class="form-label">State<span class="required">*</span></label>
+                        <div class="mb-3 col-6">
+                            <label for="state" class="form-label">State:<span class="required">*</span></label>
                             <select class="form-select" id="state" required>
-                                <option selected>Alabama</option>
+                                <option selected>MD</option>
                                 <!-- Add other states here -->
                             </select>
                         </div>
 
-                        <div class="mb-3">
-                            <label for="zipCode" class="form-label">Zip Code<span class="required">*</span></label>
+                        <div class="mb-3 col-6">
+                            <label for="zipCode" class="form-label">Zip<span class="required">*</span> (xxxxx or xxxxx-xxxx):</label>
                             <input type="text" class="form-control" id="zipCode" required>
                         </div>
 
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone<span class="required">*</span></label>
+                        <div class="mb-3 col-6">
+                            <label for="phone" class="form-label">Phone<span class="required">*</span> (xxx-xxx-xxxx):</label>
                             <input type="text" class="form-control" id="phone" required>
                         </div>
 
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email address<span class="required">*</span></label>
-                            <input type="email" class="form-control" id="email" required>
+                        <div class="form-check ps-0">
+                            <label for="ContentPlaceHolder1_rblShipTo_0" class="form-check-label">Ship to my Billing Address<span class="required">*</span></label>
+                            <input id="ContentPlaceHolder1_rblShipTo_0" type="radio" class="form-radio-input" name="shippingRadios" value="Billing" required onclick="toggleShippingDetails(false)">
+                        </div>
+                        
+                        <div class="form-check ps-0">
+                            <label for="ContentPlaceHolder1_rblShipTo_1" class="form-check-label">Ship to a Different Address<span class="required">*</span></label>
+                            <input id="ContentPlaceHolder1_rblShipTo_1" type="radio" class="form-radio-input" name="shippingRadios" value="Shipping" checked required onclick="toggleShippingDetails(true)">
                         </div>
 
-                        <!-- Create an account section -->
-                        <div class="pt-5 mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="createAccount"
-                                onclick="toggleElement('accountDetails')" checked>
-                            <label class="form-check-label" for="createAccount" checked>Create an account?</label>
-                        </div>
+                        <div id="shippingDetails" class="pt-4 mt-4 border-top" style="display:block;">
+                            <h2 class="mb-4 text-primary">Shipping Address</h2>
 
-                        <div id="accountDetails" style="display:block;">
-                            <div class="mb-3">
-                                <label for="username" class="form-label">Account username<span
-                                        class="required">*</span></label>
-                                <input type="text" class="form-control" id="username">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Create account password<span
-                                        class="required">*</span></label>
-                                <input type="password" class="form-control" id="password">
-                            </div>
-                        </div>
-
-                        <!-- Ship to a different address section -->
-                        <div class="pt-5 mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" checked id="differentAddress"
-                                onclick="toggleElement('shippingDetails')">
-                            <label class="form-check-label" for="differentAddress">Ship to a different address?</label>
-                        </div>
-
-                        <div id="shippingDetails" style="display:block;">
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <label for="firstName" class="form-label">First Name<span
-                                            class="required">*</span></label>
-                                    <input type="text" class="form-control" id="firstName" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="lastName" class="form-label">Last Name<span
-                                            class="required">*</span></label>
-                                    <input type="text" class="form-control" id="lastName" required>
-                                </div>
-                            </div>
-
-
-                            <div class="mb-3">
-                                <label for="company" class="form-label">Company Name (optional)</label>
-                                <input type="text" class="form-control" id="company">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="country" class="form-label">Country/Region<span
-                                        class="required">*</span></label>
+                            <div class="mb-3 col-6">
+                                <label for="country" class="form-label">Country/Region<span class="required">*</span></label>
                                 <select class="form-select" id="country" required>
                                     <option selected>United States (US)</option>
                                     <!-- Add other countries here -->
                                 </select>
                             </div>
-
+    
                             <div class="mb-3">
-                                <label for="address" class="form-label">Street address<span
-                                        class="required">*</span></label>
-                                <input type="text" class="form-control" id="address"
-                                    placeholder="House number and street name" required>
-                                <input type="text" class="form-control mt-2"
-                                    placeholder="Apartment, suite, unit etc. (optional)">
+                                <label for="address" class="form-label">First Name:<span class="required">*</span></label>
+                                <input type="text" class="form-control mt-2">
                             </div>
-
+    
                             <div class="mb-3">
-                                <label for="townCity" class="form-label">Town/City<span
-                                        class="required">*</span></label>
+                                <label for="address" class="form-label">Last Name:<span class="required">*</span></label>
+                                <input type="text" class="form-control mt-2">
+                            </div>
+    
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Street address 1:<span class="required">*</span></label>
+                                <input type="text" class="form-control mt-2">
+                            </div>
+    
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Street address 2:</label>
+                                <input type="text" class="form-control mt-2">
+                            </div>
+    
+                            <div class="mb-3">
+                                <label for="company" class="form-label">Company Name or C/O:</label>
+                                <input type="text" class="form-control" id="company">
+                            </div>
+    
+                            <div class="mb-3">
+                                <label for="townCity" class="form-label">City:<span class="required">*</span></label>
                                 <input type="text" class="form-control" id="townCity" required>
                             </div>
-
-                            <div class="mb-3">
-                                <label for="state" class="form-label">State<span class="required">*</span></label>
+    
+                            <div class="mb-3 col-6">
+                                <label for="state" class="form-label">State:<span class="required">*</span></label>
                                 <select class="form-select" id="state" required>
-                                    <option selected>Alabama</option>
+                                    <option selected>MD</option>
                                     <!-- Add other states here -->
                                 </select>
                             </div>
-
-                            <div class="mb-3">
-                                <label for="zipCode" class="form-label">Zip Code<span class="required">*</span></label>
+    
+                            <div class="mb-3 col-6">
+                                <label for="zipCode" class="form-label">Zip<span class="required">*</span> (xxxxx or xxxxx-xxxx):</label>
                                 <input type="text" class="form-control" id="zipCode" required>
+                            </div>
+    
+                            <div class="mb-3 col-6">
+                                <label for="phone" class="form-label">Phone<span class="required">*</span> (xxx-xxx-xxxx):</label>
+                                <input type="text" class="form-control" id="phone" required>
+                            </div>
+
+                        </div>
+
+                        <div id="shippingOptions" class="pt-4 mt-4 border-top">
+                            <h2 class="mb-4 text-primary">Shipping Options</h2>
+
+                            <div class="d-flex flex-wrap align-items-center">
+                                <div class="shipping-name mb-3">Standard Shipping</div>
+                                <div class="shipping-logo ms-3 mb-3">
+                                    <img src="assets/img/ship-logo.jpg" alt="shipping company" width="89" height="56">
+                                </div>
+                            </div>
+                            <p>Your order will arrive in 3 to 10 business days.</p>
+
+                        </div>
+
+                        <div class="pt-4 mt-4 border-top">
+                            <h2 class="mb-4 text-primary">Additional Information</h2>
+                            <div class="mb-3">
+                                <label for="orderNotes" class="form-label">Notes:</label>
+                                <textarea class="form-control" id="orderNotes" rows="3"></textarea>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="inlineCheckbox1" value="specialOffer1">
+                                <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="inlineCheckbox2" value="specialOffer2">
+                                <label class="form-check-label" for="inlineCheckbox2">No</label>
                             </div>
                         </div>
 
-                        <div class="mb-3">
-                            <label for="orderNotes" class="form-label">Order notes (optional)</label>
-                            <textarea class="form-control" id="orderNotes" rows="3"></textarea>
+                        <div class="pt-4 mt-4 border-top">
+                            <h2 class="mb-4 text-primary">Payment Options</h2>
+                            <div class="form-check form-check-inline mb-3">
+                                <input class="form-check-input" type="radio" name="PaymentOptions" id="inlineCheckbox1" value="option1" checked>
+                                <label class="form-check-label" for="inlineCheckbox1">Credit Card</label>
+                            </div>
+                            <div class="form-check form-check-inline mb-3">
+                                <input class="form-check-input" type="radio" name="PaymentOptions" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">Paypal</label>
+                            </div>
+                            <div class="form-check form-check-inline mb-3">
+                                <input class="form-check-input" type="radio" name="PaymentOptions" id="inlineCheckbox2" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox3">Bitpay (Crypto)</label>
+                            </div>
+                            <div class="form-check form-check-inline mb-3">
+                                <input class="form-check-input" type="radio" name="PaymentOptions" id="inlineCheckbox2" value="option4">
+                                <label class="form-check-label" for="inlineCheckbox4">eCheck (ACH)</label>
+                            </div>
+                        </div>
+
+                        <div id="paymentOptionCC">
+                            <div class="mb-3">
+                                <label class="form-label">Name on Card:<span class="required">*</span></label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Card Number:<span class="required">*</span> (no spaces or dashes) </label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Expiration:<span class="required">*</span></label>
+                                <div class="d-inline-flex">
+                                    <select class="form-control" name="ctl00$ContentPlaceHolder1$ddExpMonth" id="ContentPlaceHolder1_ddExpMonth">
+                                        <option selected="selected" value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>   
+                                    </select>
+
+                                    <select class="form-control ms-1" name="ctl00$ContentPlaceHolder1$ddExpYear" id="ContentPlaceHolder1_ddExpYear">
+                                        <option selected="selected" value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                    </select>                           
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Security Code:<span class="required">*</span> (no spaces or dashes) </label>
+                                <input type="text" class="form-control w-auto" maxlength="3" style="max-width:56px;">
+                                <span>(CVV2)</span>
+                                <p>
+                                    Visa, Mastercard, Discover:<br />
+                                    Last 3 digits on back of card.<br />
+                                    American Express:<br />
+                                    Last 4 digits in small print on the front of card.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="mt-4">
+                            <input type="button" class="btn btn-primary btn-input apx-arrow2" value="Place Order" />
                         </div>
 
                     </div>
+
                     <div class="col-md-5">
                         <div class="orderDetails">
-                            <h2>Your Order</h2>
+                            <h2 class="text-primary">Order Summary</h2>
                             <div class="orderDetails-fields">
+                                <p>Shipping and additional costs are calculated based on values you have entered</p>
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="fw-bold">Order subtotal</td>
+                                                <td>$10.12</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Discount subtotal</td>
+                                                <td>0.00</td>
+                                            </tr>
 
-                                <div class="d-flex flex-wrap justify-content-between tableHead">
-                                    <div class="col"><strong>Product</strong></div>
-                                    <div class="col text-end"><strong>Subtotal</strong></div>
-                                </div>
-
-                                <div class="tableBody align-items-center border-bottom pb-2 mb-2">
-                                    <table class="table">
-                                        <tr>
-                                            <td>
-                                                <span class="productName">Pure Bergamot Extract, Natural - 2 fl. oz.
-                                                    glass bottle</span>
-                                            </td>
-                                            <td><span class="productAmount">$00.00</span></td>
-                                        </tr>
+                                            <tr>
+                                                <td class="fw-bold">Shipping and handling</td>
+                                                <td>$0.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Tax</td>
+                                                <td>$0.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold text-primary"><strong>Total</strong></td>
+                                                <td class="fw-bold text-primary">$10.12</td>
+                                            </tr>
+                                        </tbody>
                                     </table>
                                 </div>
-
-                                <div class="d-flex flex-wrap justify-content-between fw-bolder border-bottom pb-2 mb-2">
-                                    <div class="col">Subtotal</div>
-                                    <div class="col text-end text-primary">$00.00</div>
-                                </div>
-
-                                <div class="d-flex flex-wrap justify-content-between fw-bolder border-bottom pb-2 mb-2">
-                                    <div class="col">Shipping</div>
-                                    <div class="col text-end">
-                                        <div>Flat rate <span class="text-primary">$00.000</span></div>
-                                        <div>Local Pickup <span class="text-primary">$00.000</span></div>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex flex-wrap justify-content-between tableFoot text-primary">
-                                    <div class="col">Total</div>
-                                    <div class="col text-end text-primary">$000.00</div>
-                                </div>
-
                             </div>
-
-                            <div class="orderDetails-fields px-30">
-                                <p><strong>Direct Bank Transfer</strong></p>
-                                <p>Make your payment directly into our bank account. Please use your Order ID as the
-                                    payment reference. Your order won’t be shipped until the funds have cleared in our
-                                    account.</p>
-
-                                <p><strong>Cheque Payment</strong></p>
-
-                                <p><strong>Cash on delivery</strong></p>
-
-                                <div class="d-inline-flex align-items-center">
-                                    <strong>Paypal</strong>
-                                    <img class="ms-2" src="assets/img/payment.jpg" alt="paypal" width="110"
-                                        height="33" />
-                                </div>
-                            </div>
-
-                            <div class="px-30">
-                                <p>Your personal data will be used to process your order, support your experience
-                                    throughout this website, and for other purposes described in our <a href="#">privacy
-                                        policy</a>.</p>
-
-                                <div class="pt-1 mb-3 form-check">
-                                    <input type="checkbox" class="form-check-input">
-                                    <label class="form-check-label fw-bold" for="acceptTerms">I have read and agree to
-                                        the website terms and conditions.</label>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary apx-arrow d-block w-100">Place Order</button>
-
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -285,9 +323,24 @@
     @@include('./partials/scripts.html')
 
     <script>
-        function toggleElement(id) {
-            var element = document.getElementById(id);
-            if (element.style.display === 'none' || element.style.display === '') {
+        document.addEventListener("DOMContentLoaded", function () {
+            checkShippingDetailsState();
+        });
+
+        function checkShippingDetailsState() {
+            var radioButtonDifferentAddress = document.getElementById('ContentPlaceHolder1_rblShipTo_1');
+            var shippingDetails = document.getElementById('shippingDetails');
+
+            if (radioButtonDifferentAddress.checked) {
+                shippingDetails.style.display = 'block';
+            } else {
+                shippingDetails.style.display = 'none';
+            }
+        }
+
+        function toggleShippingDetails(show) {
+            var element = document.getElementById('shippingDetails');
+            if (show) {
                 element.style.display = 'block';
             } else {
                 element.style.display = 'none';
