@@ -1,5 +1,4 @@
 <!doctype html>
-<!doctype html>
 <html lang="en">
 
 <head>
@@ -20,60 +19,56 @@
 <body>
     <header class="site-header">
         <!-- Top Nav -->
-<nav id="top-nav" class="navbar navbar-expand-lg navbar-light">
+<nav id="top-nav" class="navbar navbar-light">
     <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTopNav"
-            aria-controls="navbarTopNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTopNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 position-relative align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Log In</a>
-                </li>
-                <li class="nav-item position-static">
-                    <a id="cartTrigger" class="nav-link position-relative" data-bs-toggle="offcanvas" href="#cartOffcanvas" role="button"
-                        aria-controls="cartOffcanvas">
-                        <span class="visually-hidden-focusable">Shopping Cart</span>
-                        <img class="cart-icon" src="assets/img/cart-icon.svg" alt="Shopping Cart" width="25" height="20" />
-                        <span class="cart-badge">3</span>
-                    </a>
-                </li>
-                <li class="nav-item dropdown cart-dropdown position-static">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">Check Out</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Account</a>
-                </li>
-                <li class="nav-item position-static">
-                    <a role="button" class="nav-link" data-bs-toggle="modal" href="#pricingModal">
-                        <span class="visually-hidden-focusable">Turn Whole Pricing On/Off</span>
-                        <img src="assets/img/truck-icon.svg" alt="Pricing" width="40" height="22" />
-                    </a>
-                </li>
-                <li class="nav-item position-static">
-                    <a role="button" class="nav-link" id="liveToastBtn">
-                        <span class="visually-hidden-focusable">Notification</span>
-                        <img src="assets/img/message-icon.png" alt="Notification" width="21" height="21" />
-                    </a>
-                </li>
-                <li class="searchbox">
-                    <!-- Search form with icon inside the box -->
-                    <div class="input-group position-relative">
-                        <input class="form-control input-search" type="text" placeholder="Search…" aria-label="Search">
-                        <button type="submit" class="btn btn-link btn-search position-absolute p-0">
-                            <span class="visually-hidden-focusable">Search</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                            </svg>
-                        </button>
-                    </div>
-                </li>
-            </ul>
-        </div>
+
+        <ul class="navbar-nav d-flex flex-wrap flex-row ms-lg-auto mb-2 mb-lg-0 position-relative align-items-center justify-content-between">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Log In</a>
+            </li>
+            <li class="nav-item position-static">
+                <a id="cartTrigger" class="nav-link position-relative" data-bs-toggle="offcanvas" href="#cartOffcanvas"
+                    role="button" aria-controls="cartOffcanvas">
+                    <span class="visually-hidden-focusable">Shopping Cart</span>
+                    <img class="cart-icon" src="assets/img/cart-icon.svg" alt="Shopping Cart" width="25" height="20" />
+                    <span class="cart-badge">3</span>
+                </a>
+            </li>
+            <li class="nav-item position-static">
+                <a class="nav-link" href="#" role="button">Check Out</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Account</a>
+            </li>
+            <li class="nav-item position-static">
+                <a role="button" class="nav-link" data-bs-toggle="modal" href="#pricingModal">
+                    <span class="visually-hidden-focusable">Turn Whole Pricing On/Off</span>
+                    <img src="assets/img/truck-icon.svg" alt="Pricing" width="40" height="22" />
+                </a>
+            </li>
+            <li class="nav-item position-static">
+                <a role="button" class="nav-link position-relative" id="liveToastBtn">
+                    <span class="visually-hidden-focusable">Notification</span>
+                    <img src="assets/img/message-icon.png" alt="Notification" width="21" height="21" />
+                    <span class="cart-badge">3</span>
+                </a>
+            </li>
+            <li class="searchbox">
+                <!-- Search form with icon inside the box -->
+                <div class="input-group position-relative">
+                    <input class="form-control input-search" type="text" placeholder="Search…" aria-label="Search">
+                    <button type="submit" class="btn btn-link btn-search position-absolute p-0">
+                        <span class="visually-hidden-focusable">Search</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+            </li>
+        </ul>
+
     </div>
 </nav>
         <!-- Secondary Nav with Logo -->
@@ -144,7 +139,7 @@
                     <div class="dropdown-menu">
                         <div class="mega-content">
                             <div class="container-fluid">
-                                <div class="row align-items-center">
+                                <div class="row align-items-start">
                                     <div class="col-lg pt-3">
                                         <div class="dropdown-heading">Oil Soluble Flavors</div>
                                         <p>We formulate these oil soluble flavors specifically for use in CBD tinctures,
@@ -220,107 +215,35 @@
     </header>
 
     <main>
-        <div class="page-hero">
-    <div class="page-hero-bg">
-        <img src="/assets/img/page-hero.jpg" alt="hero image" />
-    </div>
-</div>
         <nav class="breads" aria-label="breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Privacy Policy</li>
+        </ol>
+    </div>
+</nav>
+        <div class="generic-page">
             <div class="container">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Alcoholic Beverage Flavors</a></li>
-                    <li class="breadcrumb-item"><a href="#">Flavors for Craft Brewing (By Flavor Category)</a></li>
-                    <li class="breadcrumb-item"><a href="#">Citrus</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Pure Bergamot Extract, Natural</li>
-                </ol>
-            </div>
-        </nav>
-        <div class="product-page page-py">
-            <div class="container">
-                <h1 class="heading-1">Pure Bergamot Extract, Natural</h1>
-                <p>Bergamot (Citrus bergamia) is a small citrus fruit, which grows primarily in Southern Italy. The
-                    fruit from this cross of a Seville orange and pear lemon is sour and not edible. Bergamot is grown
-                    for its essential oil, which is contained in the peel. The oil is used in Earl Grey tea and many
-                    popular fragrances. Bergamot is unrelated to the herb of the same name. In most alcoholic beverages,
-                    we recommend a starting use level of 0.10% to 0.30% and adjust to desired impact is achieved. In
-                    high proof spirits start at 0.75%. This flavor is TTB approved. While bergamot has a beautiful aroma
-                    and is perfectly safe when consumed as a flavor, we do not recommend you apply the extract to the
-                    skin. The Bergamot oil used to make the extract has been linked to photo sensitivity in some people
-                    and can cause a skin rash.</p>
-                <div class="table-responsive">
-                    <table class="product-loop">
-                        <thead>
-                            <tr>
-                                <th>Code</th>
-                                <th>Product Name</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>008TTB-4954</td>
-                                <td>Pure Bergamot Extract, Natural - 2 fl. oz. glass bottle</td>
-                                <td>$9.69</td>
-                                <td><input type="number" class="input-quantity" name="quantity1" min="0"></td>
-                                <td><button type="button" class="btn btn-primary btn-cart">Add to Cart</button></td>
-                            </tr>
-                            <tr>
-                                <td>008TTB-4951</td>
-                                <td>Pure Bergamot Extract, Natural - 4 fl. oz. glass bottle</td>
-                                <td>$14.77</td>
-                                <td><input type="number" class="input-quantity" name="quantity2" min="0"></td>
-                                <td><button type="button" class="btn btn-primary btn-cart">Add to Cart</button></td>
-                            </tr>
-                            <tr>
-                                <td>008TTB-4955</td>
-                                <td>Pure Bergamot Extract, Natural - 8 fl. oz. glass bottle</td>
-                                <td>$28.39</td>
-                                <td><input type="number" class="input-quantity" name="quantity3" min="0"></td>
-                                <td><button type="button" class="btn btn-primary btn-cart">Add to Cart</button></td>
-                            </tr>
-                            <tr>
-                                <td>008TTB-4952</td>
-                                <td>Pure Bergamot Extract, Natural - 1 Quart plastic bottle</td>
-                                <td>$57.22</td>
-                                <td><input type="number" class="input-quantity" name="quantity4" min="0"></td>
-                                <td><button type="button" class="btn btn-primary btn-cart">Add to Cart</button></td>
-                            </tr>
-                            <tr>
-                                <td>008TTB-4953</td>
-                                <td>Pure Bergamot Extract, Natural - 1 Gallon plastic jug</td>
-                                <td>$192.09</td>
-                                <td><input type="number" class="input-quantity" name="quantity5" min="0"></td>
-                                <td><button type="button" class="btn btn-primary btn-cart">Add to Cart</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="text-md-end text-center pb-5">
-                    <button type="button" class="btn btn-primary btn-default">Add to Cart and Proceed to
-                        Checkout</button>
-                </div>
-                <p>Pure Bergamot Extract, Natural contains ethyl alcohol, water and bergamot oil. This extract is sugar
-                    and gluten-free.</p>
-                <ul>
-                    <li>Our Flavors Are Used By Hundreds of Breweries, Distilleries and Wineries in North America.</li>
-                    <li>For Beer, Cider, Wine, Hard Seltzer and Spirits.</li>
-                    <li>TTB Approved.</li>
-                    <li>Kosher Certified.</li>
-                </ul>
-                <p class="text-primary">Information for E-Cigarette and Non Food & Drink Buyers</p>
+                <h1 class="heading-1">Privacy Policy</h1>
+                <p>Thank you for visiting Apex Flavors, Inc. We want you to know that your privacy is important to us. Part of our commitment to you is to respect and protect the privacy of the personal information you provide to us.   When you submit your personal information to us, you are giving us your consent to the collection, use, and disclosure of your information as set forth in this Privacy Policy. We are always available to discuss your questions or concerns regarding this Privacy Policy and our privacy practices. If you would like to speak to a customer service representative, please contact us via telephone at 410-565-6600 or email us at knunez@apexflavors.com.</p>
+                <p>We encourage you to check the date of our Privacy Policy each time you visit our Website for any updates or changes. Your use of our Website constitutes your consent to this Privacy Policy, including any changes or updates. We may make additional features, functionality, offers, activities, or events ("opportunities") available to you subject to additional or different privacy rules that we disclose in connection with those opportunities.</p>
+                <p><strong>Collection & Use of Information in General</strong><br>
+                <p>In general, you can browse our website without telling us who you are or revealing any personal information about yourself. At various times, you may decide to provide us with your personal information. You should know that we receive and may store all personal information (whether written or oral) that you provide to us through whatever means you provide such information (through our website, via e-mail, over the telephone, etc.). Personal information means any information that may be used to identify an individual, including, but not limited to, a first and last name, home, billing or other physical address or email address, as well as any information associated with the foregoing. In addition to your contact information, we may collect information about your purchases, billing address, shipping address, gender, occupation, birthday, marital status, anniversary, interests, phone number or other contact information.</p></p>
 
-                <div class="d-flex flex-wrap justify-content-between align-items-center pt-4">
-                    <div class="col-md text-md-start text-center w-100 mb-md-0 mb-4">
-                        <img src="assets/img/trusted-partners.jpg" alt="partners" />
-                    </div>
-                    <div class="col-md text-md-end text-center w-100">
-                        <button type="button" class="btn btn-primary btn-default me-5">Print SDS</button>
-                        <button type="button" class="btn btn-primary btn-default">Print Spec</button>
-                    </div>
-                </div>
+                <p><strong>Use of Your Personal Information</strong><br>
+                We may use the information we collect about you to: Facilitate your purchases and provide the services you request; confirm and track your order; respond to your inquiries and requests; prevent and detect fraud or abuse; improve our website, service, product offerings, marketing and promotional efforts, and overall customer experience; identify your product and service preferences; understand our customer demographics, preferences and interests, and contact you (via email, postal mail, or telephone) regarding products and services that we believe may be of interest to you.</p>
+                    
+                <p><strong>Personal Information that we May Share with Others</strong><br>
+                In certain circumstances, we may share your personal information with trusted partners.</p>
+                    
+                <p>Service Providers: We may from time to time use trusted third-party service providers to perform certain services on our and your behalf, including: shipping, payment processing, data storage/management, webhosting, web analytics, fulfillment, assembly, marketing, mailing, emailing, etc. These service providers only receive personal information if such information is needed to perform their function(s), and they are not authorized to use any personal information for any other purpose(s) other than the purpose(s) set forth by Apex Flavors, Inc.</p>
+                    
+                <p><strong>Compliance with Law and Fraud Protection:</strong><br>
+                    We may, and you authorize us to use and disclose any information, including personal information: (1) we deem necessary, in our sole discretion, to comply with any applicable law, regulation, legal process, or governmental request; (2) in order to investigate, prevent or take action regarding illegal activities, suspected fraud, situations involving potential threats to the physical safety of any person or as otherwise required by law; (3) to other companies and organizations for credit fraud protection and risk reduction; and (4) to enforce any agreement we have with you.</p>
+                    
+                <p><strong>Security</strong><br>
+                Apex Flavors, Inc. is committed to the protection of the personally identifiable information that you share with us. We utilize a combination of physical and electronic security technologies, procedures, and organizational measures to help protect your personally identifiable information from unauthorized access, use or disclosure. When we transfer sensitive personal information (for example, credit card information) over the Internet, we protect it using Secure Sockets Layer (SSL) encryption technology. While we strive to safeguard your personal information once we receive it, no transmission of data over the Internet or any other public network can be guaranteed to be 100% secure and, accordingly, we cannot guarantee or warrant the security of any information you disclose or transmit to us.</p>
             </div>
         </div>
     </main>

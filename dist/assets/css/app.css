@@ -12878,7 +12878,7 @@ img {
 }
 
 .btn-cart {
-  background-image: url(../img/add-to-cart-icon.svg);
+  background-image: url(/assets/img/add-to-cart-icon.svg);
   background-repeat: no-repeat;
   background-position: 6px center;
   background-size: auto 16px;
@@ -13119,7 +13119,7 @@ img {
 }
 
 .apx-arrow2 {
-  background-image: url(../img/arrow.png);
+  background-image: url(/assets/img/arrow.png);
   background-repeat: no-repeat;
   background-position: left center;
   background-size: auto 36px;
@@ -13238,10 +13238,10 @@ img {
   min-height: 25px;
 }
 .generic-contact-block .--phone {
-  background-image: url(../img/phone.svg);
+  background-image: url(/assets/img/phone.svg);
 }
 .generic-contact-block .--map {
-  background-image: url(../img/map-pin.svg);
+  background-image: url(/assets/img/map-pin.svg);
 }
 .generic-contact-block a {
   color: inherit;
@@ -13413,4 +13413,16 @@ img {
 }
 .searchHead > * {
   margin-bottom: 15px;
+}
+
+.apx-sort-by a {
+  font-size: 14px;
+}
+
+.feature-1 {
+  background-color: #fcfcfc;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  min-height: 380px;
+  border-top: 5px solid #2f3382;
 }

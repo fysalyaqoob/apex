@@ -19,60 +19,56 @@
 <body>
     <header class="site-header">
         <!-- Top Nav -->
-<nav id="top-nav" class="navbar navbar-expand-lg navbar-light">
+<nav id="top-nav" class="navbar navbar-light">
     <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTopNav"
-            aria-controls="navbarTopNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTopNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 position-relative align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Log In</a>
-                </li>
-                <li class="nav-item position-static">
-                    <a id="cartTrigger" class="nav-link position-relative" data-bs-toggle="offcanvas" href="#cartOffcanvas" role="button"
-                        aria-controls="cartOffcanvas">
-                        <span class="visually-hidden-focusable">Shopping Cart</span>
-                        <img class="cart-icon" src="assets/img/cart-icon.svg" alt="Shopping Cart" width="25" height="20" />
-                        <span class="cart-badge">3</span>
-                    </a>
-                </li>
-                <li class="nav-item dropdown cart-dropdown position-static">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">Check Out</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Account</a>
-                </li>
-                <li class="nav-item position-static">
-                    <a role="button" class="nav-link" data-bs-toggle="modal" href="#pricingModal">
-                        <span class="visually-hidden-focusable">Turn Whole Pricing On/Off</span>
-                        <img src="assets/img/truck-icon.svg" alt="Pricing" width="40" height="22" />
-                    </a>
-                </li>
-                <li class="nav-item position-static">
-                    <a role="button" class="nav-link" id="liveToastBtn">
-                        <span class="visually-hidden-focusable">Notification</span>
-                        <img src="assets/img/message-icon.png" alt="Notification" width="21" height="21" />
-                    </a>
-                </li>
-                <li class="searchbox">
-                    <!-- Search form with icon inside the box -->
-                    <div class="input-group position-relative">
-                        <input class="form-control input-search" type="text" placeholder="Search…" aria-label="Search">
-                        <button type="submit" class="btn btn-link btn-search position-absolute p-0">
-                            <span class="visually-hidden-focusable">Search</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                            </svg>
-                        </button>
-                    </div>
-                </li>
-            </ul>
-        </div>
+
+        <ul class="navbar-nav d-flex flex-wrap flex-row ms-lg-auto mb-2 mb-lg-0 position-relative align-items-center justify-content-between">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Log In</a>
+            </li>
+            <li class="nav-item position-static">
+                <a id="cartTrigger" class="nav-link position-relative" data-bs-toggle="offcanvas" href="#cartOffcanvas"
+                    role="button" aria-controls="cartOffcanvas">
+                    <span class="visually-hidden-focusable">Shopping Cart</span>
+                    <img class="cart-icon" src="assets/img/cart-icon.svg" alt="Shopping Cart" width="25" height="20" />
+                    <span class="cart-badge">3</span>
+                </a>
+            </li>
+            <li class="nav-item position-static">
+                <a class="nav-link" href="#" role="button">Check Out</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Account</a>
+            </li>
+            <li class="nav-item position-static">
+                <a role="button" class="nav-link" data-bs-toggle="modal" href="#pricingModal">
+                    <span class="visually-hidden-focusable">Turn Whole Pricing On/Off</span>
+                    <img src="assets/img/truck-icon.svg" alt="Pricing" width="40" height="22" />
+                </a>
+            </li>
+            <li class="nav-item position-static">
+                <a role="button" class="nav-link position-relative" id="liveToastBtn">
+                    <span class="visually-hidden-focusable">Notification</span>
+                    <img src="assets/img/message-icon.png" alt="Notification" width="21" height="21" />
+                    <span class="cart-badge">3</span>
+                </a>
+            </li>
+            <li class="searchbox">
+                <!-- Search form with icon inside the box -->
+                <div class="input-group position-relative">
+                    <input class="form-control input-search" type="text" placeholder="Search…" aria-label="Search">
+                    <button type="submit" class="btn btn-link btn-search position-absolute p-0">
+                        <span class="visually-hidden-focusable">Search</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+            </li>
+        </ul>
+
     </div>
 </nav>
         <!-- Secondary Nav with Logo -->
@@ -143,7 +139,7 @@
                     <div class="dropdown-menu">
                         <div class="mega-content">
                             <div class="container-fluid">
-                                <div class="row align-items-center">
+                                <div class="row align-items-start">
                                     <div class="col-lg pt-3">
                                         <div class="dropdown-heading">Oil Soluble Flavors</div>
                                         <p>We formulate these oil soluble flavors specifically for use in CBD tinctures,

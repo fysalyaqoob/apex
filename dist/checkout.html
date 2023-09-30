@@ -19,60 +19,56 @@
 <body>
     <header class="site-header">
         <!-- Top Nav -->
-<nav id="top-nav" class="navbar navbar-expand-lg navbar-light">
+<nav id="top-nav" class="navbar navbar-light">
     <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTopNav"
-            aria-controls="navbarTopNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTopNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 position-relative align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Log In</a>
-                </li>
-                <li class="nav-item position-static">
-                    <a id="cartTrigger" class="nav-link position-relative" data-bs-toggle="offcanvas" href="#cartOffcanvas" role="button"
-                        aria-controls="cartOffcanvas">
-                        <span class="visually-hidden-focusable">Shopping Cart</span>
-                        <img class="cart-icon" src="assets/img/cart-icon.svg" alt="Shopping Cart" width="25" height="20" />
-                        <span class="cart-badge">3</span>
-                    </a>
-                </li>
-                <li class="nav-item dropdown cart-dropdown position-static">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">Check Out</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Account</a>
-                </li>
-                <li class="nav-item position-static">
-                    <a role="button" class="nav-link" data-bs-toggle="modal" href="#pricingModal">
-                        <span class="visually-hidden-focusable">Turn Whole Pricing On/Off</span>
-                        <img src="assets/img/truck-icon.svg" alt="Pricing" width="40" height="22" />
-                    </a>
-                </li>
-                <li class="nav-item position-static">
-                    <a role="button" class="nav-link" id="liveToastBtn">
-                        <span class="visually-hidden-focusable">Notification</span>
-                        <img src="assets/img/message-icon.png" alt="Notification" width="21" height="21" />
-                    </a>
-                </li>
-                <li class="searchbox">
-                    <!-- Search form with icon inside the box -->
-                    <div class="input-group position-relative">
-                        <input class="form-control input-search" type="text" placeholder="Search…" aria-label="Search">
-                        <button type="submit" class="btn btn-link btn-search position-absolute p-0">
-                            <span class="visually-hidden-focusable">Search</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                            </svg>
-                        </button>
-                    </div>
-                </li>
-            </ul>
-        </div>
+
+        <ul class="navbar-nav d-flex flex-wrap flex-row ms-lg-auto mb-2 mb-lg-0 position-relative align-items-center justify-content-between">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Log In</a>
+            </li>
+            <li class="nav-item position-static">
+                <a id="cartTrigger" class="nav-link position-relative" data-bs-toggle="offcanvas" href="#cartOffcanvas"
+                    role="button" aria-controls="cartOffcanvas">
+                    <span class="visually-hidden-focusable">Shopping Cart</span>
+                    <img class="cart-icon" src="assets/img/cart-icon.svg" alt="Shopping Cart" width="25" height="20" />
+                    <span class="cart-badge">3</span>
+                </a>
+            </li>
+            <li class="nav-item position-static">
+                <a class="nav-link" href="#" role="button">Check Out</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Account</a>
+            </li>
+            <li class="nav-item position-static">
+                <a role="button" class="nav-link" data-bs-toggle="modal" href="#pricingModal">
+                    <span class="visually-hidden-focusable">Turn Whole Pricing On/Off</span>
+                    <img src="assets/img/truck-icon.svg" alt="Pricing" width="40" height="22" />
+                </a>
+            </li>
+            <li class="nav-item position-static">
+                <a role="button" class="nav-link position-relative" id="liveToastBtn">
+                    <span class="visually-hidden-focusable">Notification</span>
+                    <img src="assets/img/message-icon.png" alt="Notification" width="21" height="21" />
+                    <span class="cart-badge">3</span>
+                </a>
+            </li>
+            <li class="searchbox">
+                <!-- Search form with icon inside the box -->
+                <div class="input-group position-relative">
+                    <input class="form-control input-search" type="text" placeholder="Search…" aria-label="Search">
+                    <button type="submit" class="btn btn-link btn-search position-absolute p-0">
+                        <span class="visually-hidden-focusable">Search</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+            </li>
+        </ul>
+
     </div>
 </nav>
         <!-- Secondary Nav with Logo -->
@@ -143,7 +139,7 @@
                     <div class="dropdown-menu">
                         <div class="mega-content">
                             <div class="container-fluid">
-                                <div class="row align-items-center">
+                                <div class="row align-items-start">
                                     <div class="col-lg pt-3">
                                         <div class="dropdown-heading">Oil Soluble Flavors</div>
                                         <p>We formulate these oil soluble flavors specifically for use in CBD tinctures,
@@ -255,7 +251,8 @@
                         <h2 class="mb-4 text-primary">BILLing information</h2>
 
                         <div class="mb-3 col-6">
-                            <label for="country" class="form-label">Country/Region<span class="required">*</span></label>
+                            <label for="country" class="form-label">Country/Region<span
+                                    class="required">*</span></label>
                             <select class="form-select" id="country" required>
                                 <option selected>United States (US)</option>
                                 <!-- Add other countries here -->
@@ -273,7 +270,8 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="address" class="form-label">Street address 1:<span class="required">*</span></label>
+                            <label for="address" class="form-label">Street address 1:<span
+                                    class="required">*</span></label>
                             <input type="text" class="form-control mt-2">
                         </div>
 
@@ -301,66 +299,77 @@
                         </div>
 
                         <div class="mb-3 col-6">
-                            <label for="zipCode" class="form-label">Zip<span class="required">*</span> (xxxxx or xxxxx-xxxx):</label>
+                            <label for="zipCode" class="form-label">Zip<span class="required">*</span> (xxxxx or
+                                xxxxx-xxxx):</label>
                             <input type="text" class="form-control" id="zipCode" required>
                         </div>
 
                         <div class="mb-3 col-6">
-                            <label for="phone" class="form-label">Phone<span class="required">*</span> (xxx-xxx-xxxx):</label>
+                            <label for="phone" class="form-label">Phone<span class="required">*</span>
+                                (xxx-xxx-xxxx):</label>
                             <input type="text" class="form-control" id="phone" required>
                         </div>
 
                         <div class="form-check ps-0">
-                            <label for="ContentPlaceHolder1_rblShipTo_0" class="form-check-label">Ship to my Billing Address<span class="required">*</span></label>
-                            <input id="ContentPlaceHolder1_rblShipTo_0" type="radio" class="form-radio-input" name="shippingRadios" value="Billing" required onclick="toggleShippingDetails(false)">
+                            <label for="ContentPlaceHolder1_rblShipTo_0" class="form-check-label">Ship to my Billing
+                                Address<span class="required">*</span></label>
+                            <input id="ContentPlaceHolder1_rblShipTo_0" type="radio" class="form-radio-input"
+                                name="shippingRadios" value="Billing" required onclick="toggleShippingDetails(false)">
                         </div>
-                        
+
                         <div class="form-check ps-0">
-                            <label for="ContentPlaceHolder1_rblShipTo_1" class="form-check-label">Ship to a Different Address<span class="required">*</span></label>
-                            <input id="ContentPlaceHolder1_rblShipTo_1" type="radio" class="form-radio-input" name="shippingRadios" value="Shipping" checked required onclick="toggleShippingDetails(true)">
+                            <label for="ContentPlaceHolder1_rblShipTo_1" class="form-check-label">Ship to a Different
+                                Address<span class="required">*</span></label>
+                            <input id="ContentPlaceHolder1_rblShipTo_1" type="radio" class="form-radio-input"
+                                name="shippingRadios" value="Shipping" checked required
+                                onclick="toggleShippingDetails(true)">
                         </div>
 
                         <div id="shippingDetails" class="pt-4 mt-4 border-top" style="display:block;">
                             <h2 class="mb-4 text-primary">Shipping Address</h2>
 
                             <div class="mb-3 col-6">
-                                <label for="country" class="form-label">Country/Region<span class="required">*</span></label>
+                                <label for="country" class="form-label">Country/Region<span
+                                        class="required">*</span></label>
                                 <select class="form-select" id="country" required>
                                     <option selected>United States (US)</option>
                                     <!-- Add other countries here -->
                                 </select>
                             </div>
-    
+
                             <div class="mb-3">
-                                <label for="address" class="form-label">First Name:<span class="required">*</span></label>
+                                <label for="address" class="form-label">First Name:<span
+                                        class="required">*</span></label>
                                 <input type="text" class="form-control mt-2">
                             </div>
-    
+
                             <div class="mb-3">
-                                <label for="address" class="form-label">Last Name:<span class="required">*</span></label>
+                                <label for="address" class="form-label">Last Name:<span
+                                        class="required">*</span></label>
                                 <input type="text" class="form-control mt-2">
                             </div>
-    
+
                             <div class="mb-3">
-                                <label for="address" class="form-label">Street address 1:<span class="required">*</span></label>
+                                <label for="address" class="form-label">Street address 1:<span
+                                        class="required">*</span></label>
                                 <input type="text" class="form-control mt-2">
                             </div>
-    
+
                             <div class="mb-3">
                                 <label for="address" class="form-label">Street address 2:</label>
                                 <input type="text" class="form-control mt-2">
                             </div>
-    
+
                             <div class="mb-3">
                                 <label for="company" class="form-label">Company Name or C/O:</label>
                                 <input type="text" class="form-control" id="company">
                             </div>
-    
+
                             <div class="mb-3">
                                 <label for="townCity" class="form-label">City:<span class="required">*</span></label>
                                 <input type="text" class="form-control" id="townCity" required>
                             </div>
-    
+
                             <div class="mb-3 col-6">
                                 <label for="state" class="form-label">State:<span class="required">*</span></label>
                                 <select class="form-select" id="state" required>
@@ -368,14 +377,16 @@
                                     <!-- Add other states here -->
                                 </select>
                             </div>
-    
+
                             <div class="mb-3 col-6">
-                                <label for="zipCode" class="form-label">Zip<span class="required">*</span> (xxxxx or xxxxx-xxxx):</label>
+                                <label for="zipCode" class="form-label">Zip<span class="required">*</span> (xxxxx or
+                                    xxxxx-xxxx):</label>
                                 <input type="text" class="form-control" id="zipCode" required>
                             </div>
-    
+
                             <div class="mb-3 col-6">
-                                <label for="phone" class="form-label">Phone<span class="required">*</span> (xxx-xxx-xxxx):</label>
+                                <label for="phone" class="form-label">Phone<span class="required">*</span>
+                                    (xxx-xxx-xxxx):</label>
                                 <input type="text" class="form-control" id="phone" required>
                             </div>
 
@@ -412,71 +423,153 @@
 
                         <div class="pt-4 mt-4 border-top">
                             <h2 class="mb-4 text-primary">Payment Options</h2>
-                            <div class="form-check form-check-inline mb-3">
-                                <input class="form-check-input" type="radio" name="PaymentOptions" id="inlineCheckbox1" value="option1" checked>
-                                <label class="form-check-label" for="inlineCheckbox1">Credit Card</label>
-                            </div>
-                            <div class="form-check form-check-inline mb-3">
-                                <input class="form-check-input" type="radio" name="PaymentOptions" id="inlineCheckbox2" value="option2">
-                                <label class="form-check-label" for="inlineCheckbox2">Paypal</label>
-                            </div>
-                            <div class="form-check form-check-inline mb-3">
-                                <input class="form-check-input" type="radio" name="PaymentOptions" id="inlineCheckbox2" value="option3">
-                                <label class="form-check-label" for="inlineCheckbox3">Bitpay (Crypto)</label>
-                            </div>
-                            <div class="form-check form-check-inline mb-3">
-                                <input class="form-check-input" type="radio" name="PaymentOptions" id="inlineCheckbox2" value="option4">
-                                <label class="form-check-label" for="inlineCheckbox4">eCheck (ACH)</label>
-                            </div>
-                        </div>
-
-                        <div id="paymentOptionCC">
-                            <div class="mb-3">
-                                <label class="form-label">Name on Card:<span class="required">*</span></label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Card Number:<span class="required">*</span> (no spaces or dashes) </label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Expiration:<span class="required">*</span></label>
-                                <div class="d-inline-flex">
-                                    <select class="form-control" name="ctl00$ContentPlaceHolder1$ddExpMonth" id="ContentPlaceHolder1_ddExpMonth">
-                                        <option selected="selected" value="01">01</option>
-                                        <option value="02">02</option>
-                                        <option value="03">03</option>
-                                        <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
-                                        <option value="07">07</option>
-                                        <option value="08">08</option>
-                                        <option value="09">09</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>   
-                                    </select>
-
-                                    <select class="form-control ms-1" name="ctl00$ContentPlaceHolder1$ddExpYear" id="ContentPlaceHolder1_ddExpYear">
-                                        <option selected="selected" value="2022">2022</option>
-                                        <option value="2023">2023</option>
-                                    </select>                           
+                            <div class="d-flex flex-wrap">
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="radio" name="tab" id="creditCardRadio"
+                                        onclick="changeTab('creditCardContent')" checked>
+                                    <label class="form-check-label" for="creditCardRadio">Credit Card</label>
+                                </div>
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="radio" name="tab" id="paypalRadio"
+                                        onclick="changeTab('paypalContent')">
+                                    <label class="form-check-label" for="paypalRadio">Paypal</label>
+                                </div>
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="radio" name="tab" id="bitpayRadio"
+                                        onclick="changeTab('bitpayContent')">
+                                    <label class="form-check-label" for="bitpayRadio">Bitpay(Crypto)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tab" id="echeckRadio"
+                                        onclick="changeTab('echeckContent')">
+                                    <label class="form-check-label" for="echeckRadio">eCheck (ACH)</label>
                                 </div>
                             </div>
+                            <!-- Tab content -->
+                            <div class="tab-content mt-3">
+                                <div id="creditCardContent" class="tab--content">
 
-                            <div class="mb-3">
-                                <label class="form-label">Security Code:<span class="required">*</span> (no spaces or dashes) </label>
-                                <input type="text" class="form-control w-auto" maxlength="3" style="max-width:56px;">
-                                <span>(CVV2)</span>
-                                <p>
-                                    Visa, Mastercard, Discover:<br />
-                                    Last 3 digits on back of card.<br />
-                                    American Express:<br />
-                                    Last 4 digits in small print on the front of card.
-                                </p>
+                                    <div class="mb-3">
+                                        <label class="form-label">Name on Card:<span class="required">*</span></label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Card Number:<span class="required">*</span> (no spaces
+                                            or
+                                            dashes) </label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Expiration:<span class="required">*</span></label>
+                                        <div class="d-inline-flex">
+                                            <select class="form-control" name="ctl00$ContentPlaceHolder1$ddExpMonth"
+                                                id="ContentPlaceHolder1_ddExpMonth">
+                                                <option selected="selected" value="01">01</option>
+                                                <option value="02">02</option>
+                                                <option value="03">03</option>
+                                                <option value="04">04</option>
+                                                <option value="05">05</option>
+                                                <option value="06">06</option>
+                                                <option value="07">07</option>
+                                                <option value="08">08</option>
+                                                <option value="09">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+
+                                            <select class="form-control ms-1" name="ctl00$ContentPlaceHolder1$ddExpYear"
+                                                id="ContentPlaceHolder1_ddExpYear">
+                                                <option selected="selected" value="2022">2022</option>
+                                                <option value="2023">2023</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Security Code:<span class="required">*</span> (no
+                                            spaces or
+                                            dashes) </label>
+                                        <input type="text" class="form-control w-auto" maxlength="3"
+                                            style="max-width:56px;">
+                                        <span>(CVV2)</span>
+                                        <p>
+                                            Visa, Mastercard, Discover:<br />
+                                            Last 3 digits on back of card.<br />
+                                            American Express:<br />
+                                            Last 4 digits in small print on the front of card.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="paypalContent" class="tab--content d-none">
+                                    <img class="d-block mx-auto"
+                                        src="https://www.apexflavors.com/images/PayPalButton.jpg" alt="Paypal">
+                                </div>
+                                <div id="bitpayContent" class="tab--content d-none">
+                                    <img class="d-block mx-auto mb-3"
+                                        src="https://www.apexflavors.com/images/bitpay.png" />
+                                    <img class="d-block mx-auto" title="" class="img-responsive"
+                                        src="https://www.apexflavors.com/images/SupportedCoins.png"
+                                        style="width:800px;">
+                                </div>
+                                <div id="echeckContent" class="tab--content d-none">
+                                    <p><b>Your products will not ship until the eCheck/ACH transaction clears the bank.
+                                            Depending on your bank it can take up to 7 to 10 business days.</b></p>
+                                    <div class="row gx-0">
+                                        <div class="col-md-4"><span class="required">*</span> Account Type:</div>
+                                        <div class="col-md-4">
+                                            <select class="form-select" name="ctl00$ContentPlaceHolder1$ddAccountType"
+                                                id="ContentPlaceHolder1_ddAccountType">
+                                                <option selected="selected" value="checking">checking</option>
+                                                <option value="savings">savings</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-0">
+                                        <div class="col-12 border-top mt-3 pt-3"></div>
+                                        <div class="col-md-4 px-2"><span class="required">*</span> Bank name:</div>
+                                        <div class="col-md-4 px-2"><input name="ctl00$ContentPlaceHolder1$tbBankname"
+                                                type="text" maxlength="50" id="ContentPlaceHolder1_tbBankname"
+                                                style="width:206px;"><span
+                                                id="ContentPlaceHolder1_Requiredfieldvalidator15" class="ErrorMessage"
+                                                style="visibility:hidden;">Required</span></div>
+                                    </div>
+                                    <div class="row gx-0">
+                                        <div class="col-12 border-top mt-3 pt-3"></div>
+                                        <div class="col-md-4 px-2"><span class="required">*</span> Account holder name:
+                                        </div>
+                                        <div class="col-md-4 px-2"><input
+                                                name="ctl00$ContentPlaceHolder1$tbAccountHolder" type="text"
+                                                maxlength="22" id="ContentPlaceHolder1_tbAccountHolder"
+                                                style="width:206px;"><span
+                                                id="ContentPlaceHolder1_Requiredfieldvalidator12" class="ErrorMessage"
+                                                style="visibility:hidden;">Required</span></div>
+                                    </div>
+                                    <div class="row gx-0">
+                                        <div class="col-12 border-top mt-3 pt-3"></div>
+                                        <div class="col-md-4 px-2"><span class="required">*</span> Routing Number:</div>
+                                        <div class="col-md-4 px-2"><input
+                                                name="ctl00$ContentPlaceHolder1$tbRoutingNumber" type="text"
+                                                maxlength="9" id="ContentPlaceHolder1_tbRoutingNumber"
+                                                style="width:206px;"><span
+                                                id="ContentPlaceHolder1_Requiredfieldvalidator13" class="ErrorMessage"
+                                                style="visibility:hidden;">Required</span></div>
+                                    </div>
+                                    <div class="row gx-0">
+                                        <div class="col-12 border-top mt-3 pt-3"></div>
+                                        <div class="col-md-4 px-2"><span class="required">*</span> Account Number:</div>
+                                        <div class="col-md-4 px-2"><input
+                                                name="ctl00$ContentPlaceHolder1$tbAccountNumber" type="text"
+                                                maxlength="17" id="ContentPlaceHolder1_tbAccountNumber"
+                                                style="width:206px;"><span
+                                                id="ContentPlaceHolder1_Requiredfieldvalidator14" class="ErrorMessage"
+                                                style="visibility:hidden;">Required</span></div>
+                                    </div>
+                                </div>
                             </div>
-
                         </div>
+
+
 
                         <div class="mt-4">
                             <input type="button" class="btn btn-primary btn-input apx-arrow2" value="Place Order" />
@@ -681,6 +774,18 @@ jQuery(document).ready(function() {
             } else {
                 element.style.display = 'none';
             }
+        }
+
+        function changeTab(contentId) {
+            // Get all the content divs and hide them
+            const contents = document.querySelectorAll('.tab-content .tab--content');
+            contents.forEach(content => {
+                content.classList.add('d-none');
+            });
+
+            // Show the selected content div
+            const selectedContent = document.getElementById(contentId);
+            selectedContent.classList.remove('d-none');
         }
     </script>
 

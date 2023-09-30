@@ -26,11 +26,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   // Add event listener for hover
   cartTrigger.addEventListener("mouseover", function () {
-    // Find the Bootstrap Offcanvas instance related to the cartOffcanvas element
-    var offcanvas = new bootstrap.Offcanvas(document.getElementById("cartOffcanvas"));
+    // Ensure this is not a mobile view
+    if (window.innerWidth > 992) { // Assuming the desktop view is more than 992px
+      // Find the Bootstrap Offcanvas instance related to the cartOffcanvas element
+      var offcanvas = new bootstrap.Offcanvas(document.getElementById("cartOffcanvas"));
 
-    // Show the offcanvas
-    offcanvas.show();
+      // Show the offcanvas
+      offcanvas.show();
+    }
   });
 
   // Get all the parallax containers and backgrounds

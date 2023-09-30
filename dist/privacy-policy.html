@@ -1,5 +1,4 @@
 <!doctype html>
-<!doctype html>
 <html lang="en">
 
 <head>
@@ -20,60 +19,56 @@
 <body>
     <header class="site-header">
         <!-- Top Nav -->
-<nav id="top-nav" class="navbar navbar-expand-lg navbar-light">
+<nav id="top-nav" class="navbar navbar-light">
     <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTopNav"
-            aria-controls="navbarTopNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTopNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 position-relative align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Log In</a>
-                </li>
-                <li class="nav-item position-static">
-                    <a id="cartTrigger" class="nav-link position-relative" data-bs-toggle="offcanvas" href="#cartOffcanvas" role="button"
-                        aria-controls="cartOffcanvas">
-                        <span class="visually-hidden-focusable">Shopping Cart</span>
-                        <img class="cart-icon" src="assets/img/cart-icon.svg" alt="Shopping Cart" width="25" height="20" />
-                        <span class="cart-badge">3</span>
-                    </a>
-                </li>
-                <li class="nav-item dropdown cart-dropdown position-static">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">Check Out</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Account</a>
-                </li>
-                <li class="nav-item position-static">
-                    <a role="button" class="nav-link" data-bs-toggle="modal" href="#pricingModal">
-                        <span class="visually-hidden-focusable">Turn Whole Pricing On/Off</span>
-                        <img src="assets/img/truck-icon.svg" alt="Pricing" width="40" height="22" />
-                    </a>
-                </li>
-                <li class="nav-item position-static">
-                    <a role="button" class="nav-link" id="liveToastBtn">
-                        <span class="visually-hidden-focusable">Notification</span>
-                        <img src="assets/img/message-icon.png" alt="Notification" width="21" height="21" />
-                    </a>
-                </li>
-                <li class="searchbox">
-                    <!-- Search form with icon inside the box -->
-                    <div class="input-group position-relative">
-                        <input class="form-control input-search" type="text" placeholder="Search…" aria-label="Search">
-                        <button type="submit" class="btn btn-link btn-search position-absolute p-0">
-                            <span class="visually-hidden-focusable">Search</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                            </svg>
-                        </button>
-                    </div>
-                </li>
-            </ul>
-        </div>
+
+        <ul class="navbar-nav d-flex flex-wrap flex-row ms-lg-auto mb-2 mb-lg-0 position-relative align-items-center justify-content-between">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Log In</a>
+            </li>
+            <li class="nav-item position-static">
+                <a id="cartTrigger" class="nav-link position-relative" data-bs-toggle="offcanvas" href="#cartOffcanvas"
+                    role="button" aria-controls="cartOffcanvas">
+                    <span class="visually-hidden-focusable">Shopping Cart</span>
+                    <img class="cart-icon" src="assets/img/cart-icon.svg" alt="Shopping Cart" width="25" height="20" />
+                    <span class="cart-badge">3</span>
+                </a>
+            </li>
+            <li class="nav-item position-static">
+                <a class="nav-link" href="#" role="button">Check Out</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Account</a>
+            </li>
+            <li class="nav-item position-static">
+                <a role="button" class="nav-link" data-bs-toggle="modal" href="#pricingModal">
+                    <span class="visually-hidden-focusable">Turn Whole Pricing On/Off</span>
+                    <img src="assets/img/truck-icon.svg" alt="Pricing" width="40" height="22" />
+                </a>
+            </li>
+            <li class="nav-item position-static">
+                <a role="button" class="nav-link position-relative" id="liveToastBtn">
+                    <span class="visually-hidden-focusable">Notification</span>
+                    <img src="assets/img/message-icon.png" alt="Notification" width="21" height="21" />
+                    <span class="cart-badge">3</span>
+                </a>
+            </li>
+            <li class="searchbox">
+                <!-- Search form with icon inside the box -->
+                <div class="input-group position-relative">
+                    <input class="form-control input-search" type="text" placeholder="Search…" aria-label="Search">
+                    <button type="submit" class="btn btn-link btn-search position-absolute p-0">
+                        <span class="visually-hidden-focusable">Search</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+            </li>
+        </ul>
+
     </div>
 </nav>
         <!-- Secondary Nav with Logo -->
@@ -144,7 +139,7 @@
                     <div class="dropdown-menu">
                         <div class="mega-content">
                             <div class="container-fluid">
-                                <div class="row align-items-center">
+                                <div class="row align-items-start">
                                     <div class="col-lg pt-3">
                                         <div class="dropdown-heading">Oil Soluble Flavors</div>
                                         <p>We formulate these oil soluble flavors specifically for use in CBD tinctures,
@@ -221,57 +216,105 @@
 
     <main>
         <nav class="breads" aria-label="breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Privacy Policy</li>
+        </ol>
+    </div>
+</nav>
+        <div class="generic-page">
             <div class="container">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Alcoholic Beverage Flavors</a></li>
-                    <li class="breadcrumb-item"><a href="#">All TTP Approved Flavors for Alcoholic Beverages
-                            (Alphabetical)</a></li>
-                    <li class="breadcrumb-item"><a href="#">All TTB Approved Flavors for Beer, Cider, Hard Seltzer,
-                            Wine, and Spirits</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Whoopie Pie Type, Natural & Artificial
-                        (Contains < 0.10% Artificial Top Note)</li>
-                </ol>
-            </div>
-        </nav>
-        <div class="product-page page-py">
-            <div class="container">
-                <h1 class="heading-1">Whoopie Pie Type, Natural & Artificial (Contains < 0.10% Artificial Top Note)</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <div class="out-of-stock-btn my-4">TEMPORARILY OUT OF STOCK</div>
+                <h1 class="heading-1">Privacy Policy</h1>
+                <p>Thank you for visiting Apex Flavors, Inc. We want you to know that your privacy is important to us.
+                    Part of our commitment to you is to respect and protect the privacy of the personal information you
+                    provide to us. When you submit your personal information to us, you are giving us your consent to
+                    the collection, use, and disclosure of your information as set forth in this Privacy Policy. We are
+                    always available to discuss your questions or concerns regarding this Privacy Policy and our privacy
+                    practices. If you would like to speak to a customer service representative, please contact us via
+                    telephone at 410-565-6600 or email us at knunez@apexflavors.com.</p>
+                <p>We encourage you to check the date of our Privacy Policy each time you visit our Website for any
+                    updates or changes. Your use of our Website constitutes your consent to this Privacy Policy,
+                    including any changes or updates. We may make additional features, functionality, offers,
+                    activities, or events ("opportunities") available to you subject to additional or different privacy
+                    rules that we disclose in connection with those opportunities.</p>
+                <p><strong>Collection & Use of Information in General</strong><br>
+                <p>In general, you can browse our website without telling us who you are or revealing any personal
+                    information about yourself. At various times, you may decide to provide us with your personal
+                    information. You should know that we receive and may store all personal information (whether written
+                    or oral) that you provide to us through whatever means you provide such information (through our
+                    website, via e-mail, over the telephone, etc.). Personal information means any information that may
+                    be used to identify an individual, including, but not limited to, a first and last name, home,
+                    billing or other physical address or email address, as well as any information associated with the
+                    foregoing. In addition to your contact information, we may collect information about your purchases,
+                    billing address, shipping address, gender, occupation, birthday, marital status, anniversary,
+                    interests, phone number or other contact information.</p>
+                </p>
 
-                <div class="apx-checkout">
+                <p><strong>Use of Your Personal Information</strong><br>
+                    We may use the information we collect about you to: Facilitate your purchases and provide the
+                    services you request; confirm and track your order; respond to your inquiries and requests; prevent
+                    and detect fraud or abuse; improve our website, service, product offerings, marketing and
+                    promotional efforts, and overall customer experience; identify your product and service preferences;
+                    understand our customer demographics, preferences and interests, and contact you (via email, postal
+                    mail, or telephone) regarding products and services that we believe may be of interest to you.</p>
+
+                <p><strong>Personal Information that we May Share with Others</strong><br>
+                    In certain circumstances, we may share your personal information with trusted partners.</p>
+
+                <p>Service Providers: We may from time to time use trusted third-party service providers to perform
+                    certain services on our and your behalf, including: shipping, payment processing, data
+                    storage/management, webhosting, web analytics, fulfillment, assembly, marketing, mailing, emailing,
+                    etc. These service providers only receive personal information if such information is needed to
+                    perform their function(s), and they are not authorized to use any personal information for any other
+                    purpose(s) other than the purpose(s) set forth by Apex Flavors, Inc.</p>
+
+                <p><strong>Compliance with Law and Fraud Protection:</strong><br>
+                    We may, and you authorize us to use and disclose any information, including personal information:
+                    (1) we deem necessary, in our sole discretion, to comply with any applicable law, regulation, legal
+                    process, or governmental request; (2) in order to investigate, prevent or take action regarding
+                    illegal activities, suspected fraud, situations involving potential threats to the physical safety
+                    of any person or as otherwise required by law; (3) to other companies and organizations for credit
+                    fraud protection and risk reduction; and (4) to enforce any agreement we have with you.</p>
+
+                <p><strong>Security</strong><br>
+                    Apex Flavors, Inc. is committed to the protection of the personally identifiable information that
+                    you share with us. We utilize a combination of physical and electronic security technologies,
+                    procedures, and organizational measures to help protect your personally identifiable information
+                    from unauthorized access, use or disclosure. When we transfer sensitive personal information (for
+                    example, credit card information) over the Internet, we protect it using Secure Sockets Layer (SSL)
+                    encryption technology. While we strive to safeguard your personal information once we receive it, no
+                    transmission of data over the Internet or any other public network can be guaranteed to be 100%
+                    secure and, accordingly, we cannot guarantee or warrant the security of any information you disclose
+                    or transmit to us.</p>
+
+
+                <div class="feature-1">
                     <div class="row">
-                        <div class="col-md-6">
-                            <p>If you would like to be notified when the product becomes available, enter the
-                                information below:</p>
-                            <div class="mb-3">
-                                <label class="form-label">First Name:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Last Name:</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">EmailAddress:</label>
-                                <input type="email" class="form-control">
-                            </div> 
-                            
-                            <input type="button" class="mt-4 btn btn-primary btn-input apx-arrow2" value="Yes please notify me">
+                        <div class="col-md-6 px-4 py-3">
+                            <h3 class="heading-3 text-primary">Non-Alcoholic</h3>
+                            <p>Years ago,
+                                formulating beverages was relatively simple: most consumers just wanted
+                                great-tasting products. Today, beverage formulators must maintain their high
+                                standards for flavor while adapting to a wide range of label requirements. Modern
+                                consumers want products that are clean label, mineral and vitamin-fortified,
+                                low-calorie, sustainable, allergen-free, non-GMO, and organic-certified, to name
+                                just a few.</p>
                         </div>
-                        <div class="col-md-6 ps-md-3 mt-md-0 mt-4">
-                            <p>Whoopie Pie Type, Natural & Artificial (Contains < 0.10% Artificial Top Note) contains propylene glycol, ethyl alcohol, water and natural and artificial flavor.</p>
-                            <ul>
-                                <li>Our flavors are used by hundreds of breweries, distilleries 
-                                and wineries in North America.</li>
-                                <li>For beer, cider, wine, hard seltzer and spirits</li>
-                                <li>TTB Approved</li>
-                                <li>Kosher Certified</li>
-                            </ul>
+                        <div class="col-sm-3 px-4 py-3">
+                            <p class="heading-4 text-primary text-uppercase"><strong>Featured Product</strong></p>
+                            <p><a class="title2"
+                                    href="../Beverage-Non-Alcoholic/alphabetical-bev/All-Flavors-for-Non-Alcoholic-Carbonated-and-Still-Beverages~2293/strawberry-kiwi-lemonade-extract-flavor-still-carbonated-beverages-seltzer~5613">Strawberry
+                                    Kiwi Lemonade Type, Natural Flavor Blend</a></p>
+                            <p>Strawberry Kiwi Lemonade Type, Natural Flavor Blend can be used in a wide range of still
+                                and carbonated beverages. This is an especially refreshing flavor for seltzer. In most
+                                applications we recommend a starting use level of 0.20% and adjust to desired impact is
+                                achieved.</p>
+                        </div>
+                        <div class="col-sm-3 px-4 py-3">
+                            <img src="https://www.apexflavors.com/productimages/featuredproduct4.png?dummy=0.7055475"
+                                id="ContentPlaceHolder1_ucFeaturedProduct1_imgfeatured" width="200"
+                                class="img-responsive" alt="Strawberry Kiwi Lemonade Type, Natural Flavor Blend">
                         </div>
                     </div>
                 </div>
