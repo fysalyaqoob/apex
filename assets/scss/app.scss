@@ -1663,3 +1663,10 @@ img {
   min-height: 380px;
   border-top: 5px solid $primary;
 }
+
+.apx-flavor-wrapper {
+  .apx-flavors {
+    margin-top: 0;
+    padding-top: 56px;
+  }
+}

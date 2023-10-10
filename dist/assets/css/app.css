@@ -13426,3 +13426,8 @@ img {
   min-height: 380px;
   border-top: 5px solid #2f3382;
 }
+
+.apx-flavor-wrapper .apx-flavors {
+  margin-top: 0;
+  padding-top: 56px;
+}
