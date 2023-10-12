@@ -12374,11 +12374,14 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;
 }
 .apx-carousel .apx-item {
   padding-top: 32px;
   padding-bottom: 44px;
   min-height: 269px;
+  position: relative;
+  z-index: 2;
 }
 .apx-carousel h3, .apx-carousel .h3 {
   font-size: 37.5px;
